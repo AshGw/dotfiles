@@ -1,18 +1,15 @@
 set autoindent
 set boldtext
 set casesensitive
-# set the mark (with a double click), or execute shortcuts.
 unset mouse
 set multibuffer
 unset nonewlines
 unset nowrap
 unset regexp
-# Uses smooth scrolling by default no need for that.
 set speller "aspell"
 set suspend
 set tabsize "4"
 set tabstospaces
-# Save automatically on exit, don't prompt.
 unset tempfile
 unset wordbounds
 
