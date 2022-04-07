@@ -35,13 +35,14 @@ _comp_options+=(globdots)		# Include hidden files.
 # Some shortcuts
 
 alias \
+    c="clear" \
 	ka="killall" \
 	sdn="shutdown -h now" \
 	e="$EDITOR" \
-	v="$EDITOR" \
 	a="apt-get" \
 	i="sudo apt-get install" \
-  g="git"
+    g="git" \
+	v="nvim"
 
 # Colorize commands when possible.
 alias \
