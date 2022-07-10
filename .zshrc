@@ -1,15 +1,12 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Boilerplate 
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/home/ashgw/.local/bin:$PATH"
-
 ZSH_THEME="robbyrussell"
-
 HIST_STAMPS="dd/mm/yyyy"
-
 plugins=(git)
-
 source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 
@@ -35,5 +32,24 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
 
-# run this: curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark --output ~/.dircolors
+# Some shortcuts
+
+alias \
+	ka="killall" \
+	sdn="shutdown -h now" \
+	e="$EDITOR" \
+	v="$EDITOR" \
+	a="apt-get" \
+	i="sudo apt-get install" \
+  g="git"
+
+# Colorize commands when possible.
+alias \
+	ls="ls -hN --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi" \
+	ip="ip -color=auto"
+
+# Colors n all so run this: curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark --output ~/.dircolors
 eval `dircolors ~/.dircolors`
