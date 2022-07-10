@@ -3,7 +3,12 @@
 
 # Boilerplate 
 export ZSH="$HOME/.oh-my-zsh"
-export PATH="/home/ashgw/.local/bin:$PATH"
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
 ZSH_THEME="robbyrussell"
 HIST_STAMPS="dd/mm/yyyy"
 plugins=(git)
