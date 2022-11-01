@@ -9,6 +9,7 @@
     pu  = pull origin
     st  = status
     df  = diff
+    c = commit -am
     ci  = commit -s
     w   = whatchanged --abbrev-commit
     ls  = ls-files
