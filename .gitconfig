@@ -5,6 +5,7 @@
 	editor = nvim --wait
 
 [alias]
+    a = add .
     p  = push origin
     pu  = pull origin
     st  = status
