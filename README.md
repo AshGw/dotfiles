@@ -1,8 +1,8 @@
 ### On a fresh machine
 
-Simply run this in the shell:
+Simply run:
 
 ```shell
 sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply ashgw
 ```
-> S/O **[chezmoi](www.chezmoi.io)**
+> S/O [chezmoi](www.chezmoi.io)
