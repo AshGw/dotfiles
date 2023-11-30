@@ -1,0 +1,10 @@
+#!/bin/bash
+
+curl -O -fsSL https://golang.org/dl/go1.19.linux-amd64.tar.gz
+tar xvf go1.19.linux-amd64.tar.gz
+rm -rf go1.19.linux-amd64.tar.gz
+sudo chown -R root:root ./go
+echo '#go' >> ~/.zshrc
+echo 'export GOPATH=$HOME/go' >> ~/.zshrc
+echo 'export PATH=$PATH:$GOPATH/bin' >> ~/.zshrc
+source ~/.zshrc
