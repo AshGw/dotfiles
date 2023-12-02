@@ -2,7 +2,7 @@
 	email = AshrefGw@proton.me
 	name = AshGw
 [core]
-	editor = nvim --wait
+	editor = nvim
 
 [alias]
     a = add .
