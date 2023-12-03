@@ -13,7 +13,7 @@ ZSH_THEME="robbyrussell"
 HIST_STAMPS="dd/mm/yyyy"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
-export LANG=en_US.UTF-8
+export LC_ALL=C.UTF-8
 
 # editors for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -40,14 +40,15 @@ _comp_options+=(globdots)		# Include hidden files.
 # Some shortcuts
 
 alias \
-    c="clear" \
+	c="clear" \
 	ka="killall" \
 	sdn="shutdown -h now" \
 	e="$EDITOR" \
 	a="apt-get" \
 	i="sudo apt-get install" \
-    g="git" \
-	v="nvim"
+	g="git" \
+	v="nvim" \
+	ts="pnpm ts-node"
 
 # Colorize commands when possible.
 alias \
@@ -59,3 +60,7 @@ alias \
 
 # Colors n all so run this: curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark --output ~/.dircolors
 eval `dircolors ~/.dircolors`
+
+
+
+
