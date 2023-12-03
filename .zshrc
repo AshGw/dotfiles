@@ -48,7 +48,8 @@ alias \
 	i="sudo apt-get install" \
 	g="git" \
 	v="nvim" \
-	ts="pnpm ts-node"
+	ts="pnpm ts-node" \ 
+	t="touch" 
 
 # Colorize commands when possible.
 alias \
