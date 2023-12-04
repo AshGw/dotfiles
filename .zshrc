@@ -49,7 +49,8 @@ alias \
 	g="git" \
 	v="nvim" \
 	ts="pnpm ts-node" \ 
-	t="touch" 
+	t="touch" \
+	p="python3"
 
 # Colorize commands when possible.
 alias \
