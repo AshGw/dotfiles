@@ -5,10 +5,17 @@
       "Prisma.prisma",
       "PulkitGangwar.nextjs-snippets",
       "rvest.vs-code-prettier-eslint",
+       // mdx 
       "unifiedjs.vscode-mdx",
+        // -:-
       "Zignd.html-css-class-completion",
       "github.vscode-github-actions",
+       // rust 
+      "serayuzgur.crates",
+      "vadimcn.vscode-lldb",
+      "tamasfe.even-better-toml",
       "rust-lang.rust-analyzer",
+       // -:-
       "ms-playwright.playwright",
       "ms-azuretools.vscode-docker",
       "akamud.vscode-theme-onedark",
