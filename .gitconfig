@@ -18,5 +18,4 @@
     unstage = reset HEAD --
     last = log -1 HEAD
     amend = commit --amend
-    gr  = log --graph --pretty=format:'%C(auto)%h -%d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    grd = log --graph --pretty=format:'%C(auto)%h -%d %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit
+    l  = log --graph --pretty=format:'%C(auto)%h -%d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
