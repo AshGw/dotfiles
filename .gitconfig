@@ -8,6 +8,7 @@
     a = add .
     p  = push origin
     pu  = pull origin
+    pprune =  pull --prune
     st  = status
     df  = diff
     c = commit -am
