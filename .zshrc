@@ -50,7 +50,8 @@ alias \
 	v="nvim" \
 	ts="pnpm ts-node" \ 
 	t="touch" \
-	p="python3"
+	p="python3" \ 
+	reload=". ~/.zshrc"
 
 # Colorize commands when possible.
 alias \
