@@ -1,29 +1,49 @@
 {
-    "recommendations": [
-      "mgmcdermott.vscode-language-babel",
-      "ms-vscode.vscode-typescript-next",
-      "Prisma.prisma",
-      "PulkitGangwar.nextjs-snippets",
-      "rvest.vs-code-prettier-eslint",
-       // mdx 
-      "unifiedjs.vscode-mdx",
-        // -:-
-      "Zignd.html-css-class-completion",
-      "github.vscode-github-actions",
-       // rust 
-      "serayuzgur.crates",
-      "vadimcn.vscode-lldb",
-      "tamasfe.even-better-toml",
-      "rust-lang.rust-analyzer",
-       // -:-
-      "ms-playwright.playwright",
-      "ms-azuretools.vscode-docker",
-      "akamud.vscode-theme-onedark",
-      "fabiospampinato.vscode-monokai-night",
-      "flymin.gruvbox-MonokaiPycharm",
-      "monokai.theme-monokai-pro-vscode",
-      "ms-vscode-remote.remote-containers",
-      "ms-vscode-remote.remote-wsl"
-    ]
-  }
-  
+  "recommendations": [
+    // GitHub Actions
+    "github.vscode-github-actions",
+    
+    // Rust
+    "serayuzgur.crates",
+    "vadimcn.vscode-lldb",
+    "tamasfe.even-better-toml",
+    "rust-lang.rust-analyzer",
+    
+    // Playwright and Docker
+    "ms-playwright.playwright",
+    "ms-azuretools.vscode-docker",
+    
+    // Themes
+    "akamud.vscode-theme-onedark",
+    "fabiospampinato.vscode-monokai-night",
+    "flymin.gruvbox-MonokaiPycharm",
+    "monokai.theme-monokai-pro-vscode",
+    
+    // Remote Development
+    "ms-vscode-remote.remote-containers",
+    "ms-vscode-remote.remote-wsl",
+
+    // Markdown and MDX
+    "unifiedjs.vscode-mdx",
+    
+
+    // JS eco
+    "mgmcdermott.vscode-language-babel",
+    "ms-vscode.vscode-typescript-next",
+    "Prisma.prisma",
+    "rvest.vs-code-prettier-eslint",
+
+    // Bootstrap
+    "justinmahar.react-bootstrap-snippets",
+    "thekalinga.bootstrap4-vscode",
+
+    // HTML and CSS
+    "Zignd.html-css-class-completion",
+
+    // Git Graph
+    "mhutchie.git-graph",
+    
+    // Live Server
+    "ritwickdey.LiveServer",
+  ]
+}
