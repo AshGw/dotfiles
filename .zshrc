@@ -41,6 +41,7 @@ _comp_options+=(globdots)		# Include hidden files.
 
 alias \
 	c="clear" \
+	y"rm -rf" # yeet\
 	ka="killall" \
 	sdn="shutdown -h now" \
 	e="$EDITOR" \
