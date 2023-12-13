@@ -14,6 +14,7 @@
     c = commit -am
     ci  = commit -s
     w   = whatchanged --abbrev-commit
+    r = rebase -i
     ls  = ls-files
     unadd = reset HEAD
     unstage = reset HEAD --
