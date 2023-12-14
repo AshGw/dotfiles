@@ -1,7 +1,5 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Boilerplate 
+# Boilerplate
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
@@ -49,9 +47,9 @@ alias \
 	i="sudo apt-get install" \
 	g="git" \
 	v="nvim" \
-	ts="pnpm ts-node" \ 
+	ts="pnpm ts-node" \
 	t="touch" \
-	p="python3" \ 
+	p="python3" \
 	reload=". ~/.zshrc"
 
 # Colorize commands when possible.
@@ -64,7 +62,3 @@ alias \
 
 # Colors n all so run this: curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark --output ~/.dircolors
 eval `dircolors ~/.dircolors`
-
-
-
-
