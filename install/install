@@ -14,6 +14,15 @@ nix-env -iA \
     nixpkgs.curl \
     nixpkgs.wget \
     nixpkgs.neovim \
+    nixpkgs.neovim \
+    nixpkgs.code
+
+
+
+
+
+
+
 
 # zsh setup
 command -v sh | sudo tee -a /etc/shells
