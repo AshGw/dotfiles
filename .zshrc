@@ -69,26 +69,9 @@ alias \
 # Colors n all so run this: curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark --output ~/.dircolors
 eval `dircolors ~/.dircolors`
 
-# rust
-export PATH="$HOME/.cargo/bin:$PATH"
-
-# pnpm
-export PNPM_HOME="/home/ashgw/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-
-# go
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export LC_ALL=C.UTF-8
 export LC_ALL=C.UTF-8
-export CHEZMOIPATH=/home/ashgw/bin/chezmoi
 
-# conda
-export PATH="$HOME/miniconda3/bin:$PATH"

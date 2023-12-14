@@ -1,0 +1,29 @@
+#!/bin/bash
+
+if ! cmmand -v curl &> /dev/null; then
+  echo "The ony tool u need to install manually is curl, so do it"
+  exit 1
+fi
+
+# nix setup
+sh <(curl -L https://nixos.org/nix/install) --no-daemon
+
+# ncessary packages installation
+nix-env -iA \
+    nixpkgs.git \
+    nixpkgs.curl \
+    nixpkgs.wget \
+    nixpkgs.neovim \
+    nixpkgs.neovim \
+    nixpkgs.code
+
+
+
+
+
+
+
+
+# zsh setup
+command -v sh | sudo tee -a /etc/shells
+sudo chsh -s $(which zsh) $USER
