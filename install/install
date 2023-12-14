@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # nix setup
+
+# if ure on bare metal debians hit <sudo apt update && sudo apt -y install xz-utils> for xz.
 sh <(curl -L https://nixos.org/nix/install) --no-daemon
 . /home/$USER/.nix-profile/etc/profile.d/nix.sh
 
@@ -9,9 +11,15 @@ nix-env -iA \
     nixpkgs.git \
     nixpkgs.curl \
     nixpkgs.wget \
+    nixpkgs.zsh \
     nixpkgs.neovim \
-    nixpkgs.neovim \
+    
+
+# dircolors 
+curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark --output ~/.dircolors
+
 
 # zsh setup
 command -v sh | sudo tee -a /etc/shells
 sudo chsh -s $(which zsh) $USER
+
