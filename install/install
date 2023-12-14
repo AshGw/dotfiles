@@ -2,6 +2,7 @@
 
 # nix setup
 sh <(curl -L https://nixos.org/nix/install) --no-daemon
+. /home/$USER/.nix-profile/etc/profile.d/nix.sh
 
 # ncessary packages installation
 nix-env -iA \
