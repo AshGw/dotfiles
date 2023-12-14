@@ -20,6 +20,8 @@ curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolor
 
 
 # zsh setup
-command -v sh | sudo tee -a /etc/shells
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" -y
 sudo chsh -s $(which zsh) $USER
-
+rm -rf .zshrc 
+sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply  --verbose ashgw
+. ~./zshrc
