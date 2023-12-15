@@ -3,6 +3,6 @@
 Simply run:
 
 ```shell
-sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply ashgw
+curl -sSfL https://raw.githubusercontent.com/AshGw/dotfiles/main/install/install |bash 
 ```
-> S/O [chezmoi](https://chezmoi.io)
+> Works on any unix-based system
