@@ -42,19 +42,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 rm -rf ~/.zshrc
 sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply ashgw
 
-config_dir="$HOME/.config"
-ssh_dir="$HOME/.ssh"
-nvim_dir="$config_dir/nvim"
-
-create_directory() {
-    if [ ! -d "$1" ]; then
-        mkdir -p "$1"
-    fi
-}
-
-create_directory "$config_dir"
-create_directory "$ssh_dir"
-create_directory "$nvim_dir"
+mkdir ~/.config ~/.ssh ~/.config/nvim
+touch ~/.config/nvim
 
 # dotfiles mapping
 declare -A dotfiles=(
@@ -63,9 +52,9 @@ declare -A dotfiles=(
   [".bashrc"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.bashrc"
   [".nanorc"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.nanorc"
   [".gitconfig"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.gitconfig"
-  ["init.vim"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.config/nvim/init.vim"
-  ["_gh_gen.sh"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.ssh/_gh_gen.sh"
-  ["config"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.ssh/config"
+  [".config/nvim/init.vim"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.config/nvim/init.vim"
+  [".ssh/_gh_gen.sh"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.ssh/_gh_gen.sh"
+  [".ssh/config"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.ssh/config"
 
 )
 
