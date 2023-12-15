@@ -2,7 +2,12 @@
 
 # nix setup
 
-# if ure on bare metal debians hit <sudo apt update && sudo apt -y install xz-utils> for xz.
+#!/bin/bash
+if ! command -v xz &> /dev/null; then
+  echo "install xz if ure on debian run:  sudo apt update && sudo apt -y install xz-utils"
+ exit 1;  
+fi
+
 sh <(curl -L https://nixos.org/nix/install) --no-daemon
 . /home/$USER/.nix-profile/etc/profile.d/nix.sh
 
@@ -20,8 +25,22 @@ curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolor
 
 
 # zsh setup
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" -y
-sudo chsh -s $(which zsh) $USER
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" -y 
 rm -rf .zshrc 
-sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply  --verbose ashgw
-. ~./zshrc
+sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply ashgw
+
+# dotfiles mapping
+declare -A dotfiles=(
+  [".zshrc"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.zshrc"
+  [".dircolors"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.dircolors"
+  [".bashrc"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.bashrc"
+  [".nanorc"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.nanorc"
+  [".gitconfig"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.gitconfig"
+)
+
+for file in "${!dotfiles[@]}"; do
+  curl -o "$HOME/$file" "${dotfiles[$file]}"
+done
+
+# source szh
+. ~/.zshrc
