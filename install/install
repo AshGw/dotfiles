@@ -28,9 +28,6 @@ nix-env -iA \
     nixpkgs.neovim \
     nixpkgs.bat 
 
-echo '#Nix' >> ~/.zshrc
-echo '. ~/.nix-profile/etc/profile.d/nix.sh' >> ~/.zshrc
-
 # dircolors
 curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark --output ~/.dircolors
 
@@ -63,6 +60,8 @@ for file in "${!dotfiles[@]}"; do
   curl -o "$HOME/$file" "${dotfiles[$file]}"
 done
 
-# source zsh
+# final zsh setup 
 zsh
+echo '#Nix' >> ~/.zshrc
+echo '. ~/.nix-profile/etc/profile.d/nix.sh' >> ~/.zshrc
 source_or_dot ~/.zshrc
