@@ -1,54 +1,6 @@
 #!/bin/bash
 
-
-# nix setup
-
-if ! command -v xz &> /dev/null; then
-  echo "install xz if ure on debian run:  sudo apt update && sudo apt -y install xz-utils"
- exit 1;  
-fi
-
-sh <(curl -L https://nixos.org/nix/install) --no-daemon
-. /home/$USER/.nix-profile/etc/profile.d/nix.sh
-
-# ncessary packages installation
-nix-env -iA \
-    nixpkgs.git \
-    nixpkgs.curl \
-    nixpkgs.wget \
-    nixpkgs.zsh \
-    nixpkgs.neovim \
-    nixpkgs.htop \
-    nixpkgs.fd \
-    nixpkgs.tmux \
-
-    
-    
-
-# dircolors 
-curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark --output ~/.dircolors
-
-
-# zsh setup
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" -y 
-rm -rf .zshrc 
-sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply ashgw
-
-# dotfiles mapping
-declare -A dotfiles=(
-  [".zshrc"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.zshrc"
-  [".dircolors"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.dircolors"
-  [".bashrc"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.bashrc"
-  [".nanorc"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.nanorc"
-  [".gitconfig"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.gitconfig"
-)
-
-for file in "${!dotfiles[@]}"; do
-  curl -o "$HOME/$file" "${dotfiles[$file]}"
-done
-
-# source zsh
-zsh
+# prerequisites 
 source_or_dot() {
   if command -v source &> /dev/null; then
     source "$1"
@@ -57,4 +9,70 @@ source_or_dot() {
   fi
 }
 
+# nix setup
+
+if ! command -v xz &> /dev/null; then
+  echo "install xz if ure on debian run:  sudo apt update && sudo apt -y install xz-utils"
+ exit 1;
+fi
+
+sh <(curl -L https://nixos.org/nix/install) --no-daemon
+source_or_dot /home/$USER/.nix-profile/etc/profile.d/nix.sh
+
+# ncessary packages installation
+nix-env -iA \
+    nixpkgs.git \
+    nixpkgs.curl \
+    nixpkgs.wget \
+    nixpkgs.zsh \
+    nixpkgs.neovim \
+    nixpkgs.bat 
+
+
+
+# dircolors
+curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark --output ~/.dircolors
+
+
+# zsh setup
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" <<< $'\n'
+
+
+rm -rf ~/.zshrc
+sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply ashgw
+
+config_dir="$HOME/.config"
+ssh_dir="$HOME/.ssh"
+nvim_dir="$config_dir/nvim"
+
+create_directory() {
+    if [ ! -d "$1" ]; then
+        mkdir -p "$1"
+    fi
+}
+
+create_directory "$config_dir"
+create_directory "$ssh_dir"
+create_directory "$nvim_dir"
+
+# dotfiles mapping
+declare -A dotfiles=(
+  [".zshrc"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.zshrc"
+  [".dircolors"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.dircolors"
+  [".bashrc"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.bashrc"
+  [".nanorc"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.nanorc"
+  [".gitconfig"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.gitconfig"
+  ["init.vim"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.config/nvim/init.vim"
+  ["_gh_gen.sh"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.ssh/_gh_gen.sh"
+  ["config"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.ssh/config"
+
+)
+
+for file in "${!dotfiles[@]}"; do
+  curl -o "$HOME/$file" "${dotfiles[$file]}"
+done
+
+# source zsh
+zsh
 source_or_dot ~/.zshrc
