@@ -2,7 +2,7 @@
 
 run:
 
-```bash
-curl -sSfL https://raw.githubusercontent.com/AshGw/dotfiles/main/install/install | bash 
+```shell
+sh <(curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/install/install)
 ```
-> Works on any unix-based system
+> This setup is platform agnostic
