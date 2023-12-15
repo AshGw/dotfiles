@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/sh
+
 
 # nix setup
 
-#!/bin/bash
 if ! command -v xz &> /dev/null; then
   echo "install xz if ure on debian run:  sudo apt update && sudo apt -y install xz-utils"
  exit 1;  
