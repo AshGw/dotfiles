@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 
 # nix setup
@@ -18,6 +18,11 @@ nix-env -iA \
     nixpkgs.wget \
     nixpkgs.zsh \
     nixpkgs.neovim \
+    nixpkgs.htop \
+    nixpkgs.fd \
+    nixpkgs.tmux \
+
+    
     
 
 # dircolors 
