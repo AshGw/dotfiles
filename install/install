@@ -60,8 +60,10 @@ for file in "${!dotfiles[@]}"; do
   curl -o "$HOME/$file" "${dotfiles[$file]}"
 done
 
-# final zsh setup 
-zsh
+# sourcing 
 echo '#Nix' >> ~/.zshrc
 echo '. ~/.nix-profile/etc/profile.d/nix.sh' >> ~/.zshrc
+
+# final zsh setup 
+zsh
 source_or_dot ~/.zshrc
