@@ -42,5 +42,14 @@ for file in "${!dotfiles[@]}"; do
   curl -o "$HOME/$file" "${dotfiles[$file]}"
 done
 
-# source szh
-. ~/.zshrc
+# source zsh
+zsh
+source_or_dot() {
+  if command -v source &> /dev/null; then
+    source "$1"
+  else
+    . "$1"
+  fi
+}
+
+source_or_dot ~/.zshrc
