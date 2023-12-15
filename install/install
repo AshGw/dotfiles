@@ -50,6 +50,7 @@ declare -A dotfiles=(
   [".bashrc"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.bashrc"
   [".nanorc"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.nanorc"
   [".gitconfig"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.gitconfig"
+  [".hushlogin"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.hushlogin"
   [".config/nvim/init.vim"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.config/nvim/init.vim"
   [".ssh/_gh_gen.sh"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.ssh/_gh_gen.sh"
   [".ssh/config"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.ssh/config"
@@ -60,10 +61,10 @@ for file in "${!dotfiles[@]}"; do
   curl -o "$HOME/$file" "${dotfiles[$file]}"
 done
 
-# sourcing 
+# sourcing nix 
 echo '#Nix' >> ~/.zshrc
 echo '. ~/.nix-profile/etc/profile.d/nix.sh' >> ~/.zshrc
 
-# final zsh setup 
+# sourcing zsh
 zsh
 source_or_dot ~/.zshrc
