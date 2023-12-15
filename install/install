@@ -28,8 +28,8 @@ nix-env -iA \
     nixpkgs.neovim \
     nixpkgs.bat 
 
-
-source_or_dot ~/.nix-profile/etc/profile.d/nix.sh
+echo '#Nix' >> ~/.zshrc
+echo '. ~/.nix-profile/etc/profile.d/nix.sh' >> ~/.zshrc
 
 # dircolors
 curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark --output ~/.dircolors
