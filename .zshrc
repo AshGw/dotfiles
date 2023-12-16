@@ -51,7 +51,7 @@ alias \
 	bbb="cd ...."   \
 	bbbb="cd ....."  \
 	bbbbb="cd ......" \
-	x="chmod +x" \
+	x="chmod +x" 
 
 
 # Colorize commands when possible.
