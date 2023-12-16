@@ -9,12 +9,6 @@ font pango:Open sans 11
 # run picom
 exec_always --no-startup-id picom &
 
-# run mpd
-exec_always --no-startup-id mpd &
-
-# run dunst
-exec_always --no-startup-id dunst &
-
 # set wallpaper
 # get the wallpaper first G
 # exec_always feh --no-fehbg --bg-scale $HOME/Pictures/wallpapers/background.png
@@ -27,8 +21,6 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # toggle polybar
 bindsym $mod+o exec $HOME/.config/polybar/launch.sh
 bindsym $mod+p exec killall -q polybar
-
-
 
 # run battery low warning
 exec_always --no-startup-id battery&
