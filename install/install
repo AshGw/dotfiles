@@ -37,6 +37,7 @@ nix-env -iA \
     nixpkgs.tree \
     nixpkgs.htop \
     nixpkgs.fd \
+    nixpkgs.xclip \
     nixpkgs.ripgrep 
 
 
