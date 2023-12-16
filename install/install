@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# prerequisites 
+# prerequisites
 source_or_dot() {
   if command -v source &> /dev/null; then
     source "$1"
@@ -24,7 +24,7 @@ fi
 sh <(curl -L https://nixos.org/nix/install) --no-daemon
 source_or_dot ~/.nix-profile/etc/profile.d/nix.sh
 
-echo "installing packages.." 
+echo "installing packages.."
 # chad packages installation
 nix-env -iA nixpkgs.git \
     nixpkgs.curl \
@@ -49,6 +49,9 @@ nix-env -iA nixpkgs.git \
     nixpkgs.wireshark \
     nixpkgs.nmap \
     nixpkgs.pandoc \
+    nixpkgs.zathura \
+    nixpkgs.feh \
+    nixpkgs.man \
     nixpkgs.tor \
     nixpkgs.tor-browser
 
@@ -57,7 +60,7 @@ nix-env -iA nixpkgs.git \
 
 
 
-# tmux plugin manager 
+# tmux plugin manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 
@@ -73,8 +76,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 rm -rf ~/.zshrc
 sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply ashgw
 
-mkdir ~/.config ~/.ssh ~/.config/nvim
-touch ~/.config/nvim
+mkdir ~/.config ~/.ssh ~/.config/nvim ~/.config/zathura
 
 # dotfiles mapping
 declare -A dotfiles=(
@@ -86,6 +88,7 @@ declare -A dotfiles=(
   [".gitconfig"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.gitconfig"
   [".hushlogin"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.hushlogin"
   [".config/nvim/init.vim"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.config/nvim/init.vim"
+  [".config/zathura/zathurarc"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.config/zathura/zathurarc"
   [".ssh/_gh_gen.sh"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.ssh/_gh_gen.sh"
   [".ssh/config"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.ssh/config"
 
@@ -95,7 +98,7 @@ for file in "${!dotfiles[@]}"; do
   curl -o "$HOME/$file" "${dotfiles[$file]}"
 done
 
-# zsh final confs   
+# zsh final confs
   echo '#Nix' >> ~/.zshrc
   echo '. ~/.nix-profile/etc/profile.d/nix.sh' >> ~/.zshrc
 
