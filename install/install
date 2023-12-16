@@ -24,11 +24,9 @@ fi
 sh <(curl -L https://nixos.org/nix/install) --no-daemon
 source_or_dot ~/.nix-profile/etc/profile.d/nix.sh
 
-
-# ncessary packages installation
-export NIXPKGS_ALLOW_UNFREE=1 # YES
-nix-env -iA \
-    nixpkgs.git \
+echo "installing packages.." 
+# chad packages installation
+nix-env -iA nixpkgs.git \
     nixpkgs.curl \
     nixpkgs.wget \
     nixpkgs.zsh \
@@ -41,20 +39,21 @@ nix-env -iA \
     nixpkgs.fd \
     nixpkgs.xclip \
     nixpkgs.ripgrep \
-    nixpkgs.direnv \ 
-    nixpkgs.librewolf \ 
-    nixpkgs.chromium \ 
+    nixpkgs.direnv \
+    nixpkgs.librewolf \
+    nixpkgs.chromium \
     nixpkgs.docker \
     nixpkgs.docker-compose \
     nixpkgs.kubectl \
-    nixpkgs.postman \
     nixpkgs.virtualbox \
     nixpkgs.wireshark \
     nixpkgs.nmap \
     nixpkgs.pandoc \
-    nixpkgs.spotify \
     nixpkgs.tor \
-    nixpkgs.tor-browser
+    nixpkgs.tor-browser \ 
+    nixpkgs.bruno 
+
+
 
 
 
