@@ -38,6 +38,11 @@ nix-env -iA nixpkgs.git \
     nixpkgs.htop \
     nixpkgs.fd \
     nixpkgs.xclip \
+    nixpkgs.polybar \
+    nixpkgs.feh \
+    nixpkgs.man \
+    nixpkgs.i3 \
+    nixpkgs.picom \
     nixpkgs.ripgrep \
     nixpkgs.direnv \
     nixpkgs.librewolf \
@@ -50,14 +55,8 @@ nix-env -iA nixpkgs.git \
     nixpkgs.nmap \
     nixpkgs.pandoc \
     nixpkgs.zathura \
-    nixpkgs.feh \
-    nixpkgs.man \
     nixpkgs.tor \
     nixpkgs.tor-browser
-
-
-
-
 
 
 # tmux plugin manager
@@ -76,7 +75,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 rm -rf ~/.zshrc
 sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply ashgw
 
-mkdir ~/.config ~/.ssh ~/.config/nvim ~/.config/zathura
+mkdir ~/.config ~/.ssh ~/.config/nvim ~/.config/zathura ~/.config/neofetch ~/.config/picom ~/.config/polybar ~/.config/i3 
 
 # dotfiles mapping
 declare -A dotfiles=(
@@ -89,6 +88,13 @@ declare -A dotfiles=(
   [".hushlogin"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.hushlogin"
   [".config/nvim/init.vim"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.config/nvim/init.vim"
   [".config/zathura/zathurarc"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.config/zathura/zathurarc"
+  [".config/i3/config"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.config/i3/config"
+  [".config/polybar/colors.ini"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.config/polybar/colors.ini"
+  [".config/polybar/config.ini"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.config/polybar/config.ini"
+  [".config/polybar/launch.sh"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.config/polybar/launch.sh"
+  [".config/polybar/uptime.sh"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.config/polybar/uptime.sh"
+  [".config/neofetch/config.conf"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.config/neofetch/config.conf"
+  [".config/picom/picom.conf"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.config/picom/picom.conf"
   [".ssh/_gh_gen.sh"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.ssh/_gh_gen.sh"
   [".ssh/config"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.ssh/config"
 
