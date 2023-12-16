@@ -50,8 +50,8 @@ nix-env -iA nixpkgs.git \
     nixpkgs.nmap \
     nixpkgs.pandoc \
     nixpkgs.tor \
-    nixpkgs.tor-browser \ 
-    nixpkgs.bruno 
+    nixpkgs.tor-browser
+
 
 
 
