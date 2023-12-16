@@ -40,6 +40,8 @@ nix-env -iA \
     nixpkgs.xclip \
     nixpkgs.ripgrep 
 
+# tmux plugin manager 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # dircolors
 curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark --output ~/.dircolors
@@ -62,6 +64,7 @@ declare -A dotfiles=(
   [".dircolors"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.dircolors"
   [".bashrc"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.bashrc"
   [".nanorc"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.nanorc"
+  [".tmux.conf"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.tmux.conf"
   [".gitconfig"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.gitconfig"
   [".hushlogin"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.hushlogin"
   [".config/nvim/init.vim"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.config/nvim/init.vim"
