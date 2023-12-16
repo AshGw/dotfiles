@@ -24,7 +24,9 @@ fi
 sh <(curl -L https://nixos.org/nix/install) --no-daemon
 source_or_dot ~/.nix-profile/etc/profile.d/nix.sh
 
+
 # ncessary packages installation
+export NIXPKGS_ALLOW_UNFREE=1 # YES
 nix-env -iA \
     nixpkgs.git \
     nixpkgs.curl \
@@ -39,7 +41,22 @@ nix-env -iA \
     nixpkgs.fd \
     nixpkgs.xclip \
     nixpkgs.ripgrep \
-    nixpkgs.direnv
+    nixpkgs.direnv \ 
+    nixpkgs.librewolf \ 
+    nixpkgs.chromium \ 
+    nixpkgs.docker \
+    nixpkgs.docker-compose \
+    nixpkgs.kubectl \
+    nixpkgs.postman \
+    nixpkgs.virtualbox \
+    nixpkgs.wireshark \
+    nixpkgs.nmap \
+    nixpkgs.pandoc \
+    nixpkgs.spotify \
+    nixpkgs.tor \
+    nixpkgs.tor-browser
+
+
 
 # tmux plugin manager 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -83,8 +100,6 @@ done
   echo '#Nix' >> ~/.zshrc
   echo '. ~/.nix-profile/etc/profile.d/nix.sh' >> ~/.zshrc
 
-  # direnv 
-  echo 'eval "$(direnv hook zsh)"' >> ~/.zshrc
 
   # sourcing
   zsh
