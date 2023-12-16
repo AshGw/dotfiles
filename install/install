@@ -38,10 +38,12 @@ nix-env -iA \
     nixpkgs.htop \
     nixpkgs.fd \
     nixpkgs.xclip \
-    nixpkgs.ripgrep 
+    nixpkgs.ripgrep \
+    nixpkgs.direnv
 
 # tmux plugin manager 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 
 # dircolors
 curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark --output ~/.dircolors
@@ -77,10 +79,13 @@ for file in "${!dotfiles[@]}"; do
   curl -o "$HOME/$file" "${dotfiles[$file]}"
 done
 
-# sourcing nix 
-echo '#Nix' >> ~/.zshrc
-echo '. ~/.nix-profile/etc/profile.d/nix.sh' >> ~/.zshrc
+# zsh final confs   
+  echo '#Nix' >> ~/.zshrc
+  echo '. ~/.nix-profile/etc/profile.d/nix.sh' >> ~/.zshrc
 
-# sourcing zsh
-zsh
-source_or_dot ~/.zshrc
+  # direnv 
+  echo 'eval "$(direnv hook zsh)"' >> ~/.zshrc
+
+  # sourcing
+  zsh
+  source_or_dot ~/.zshrc
