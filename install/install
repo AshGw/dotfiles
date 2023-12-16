@@ -43,6 +43,7 @@ nix-env -iA nixpkgs.git \
     nixpkgs.man \
     nixpkgs.i3 \
     nixpkgs.picom \
+    nixpkgs.pango \
     nixpkgs.ripgrep \
     nixpkgs.direnv \
     nixpkgs.librewolf \
