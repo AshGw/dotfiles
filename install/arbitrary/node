@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | zsh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | sh
 nvm install --lts
 echo 'export LC_ALL=C.UTF-8' >> ~/.zshrc
 source ~/.zshrc
