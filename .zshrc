@@ -164,3 +164,9 @@ fi
 if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
+
+# generates github ssh keys
+ghkey() {
+    chmod +x ~/.ssh/_gh_gen.sh
+     ~/.ssh/_gh_gen.sh
+}
