@@ -2,7 +2,7 @@
 
 wget -qO- https://get.pnpm.io/install.sh | sh -
 
-cat >>  ~./zshrc <<'EOF'
+cat >>   ~/.zshrc <<'EOF'
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
@@ -11,4 +11,4 @@ case ":$PATH:" in
 esac
 EOF
 
-source ~./zshrc
+source  ~/.zshrc
