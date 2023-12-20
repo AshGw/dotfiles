@@ -14,7 +14,7 @@ imap ,, <esc>:keepp /<++><CR>ca<
 
 
 "Basics"
-
+set shell=/bin/zsh
 set encoding=UTF-8
 set number
 set relativenumber
@@ -46,18 +46,96 @@ Plug 'jreybert/vimagit'
 Plug 'vimwiki/vimwiki'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-commentary'
+
+
+" JS ecosystem setup
+
 Plug 'ap/vim-css-color'
+Plug 'pangloss/vim-javascript'    " JavaScript support
+Plug 'leafgarland/typescript-vim' " TypeScript syntax
+Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
+Plug 'jparise/vim-graphql'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Remap keys for applying codeAction to the current line.
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+
+" CoC extensions
+let g:coc_global_extensions = ['coc-tsserver']
+
+nnoremap <silent><leader>1 :source ~/.config/nvim/init.vim \| :PlugInstall<CR>
+
+
+" JS ECO done
+
+
+" more useful pluuugs 🌿
+
+let g:kite_supported_languages = ['python', 'javascript']
+
+Plug 'rust-lang/rust.vim'
+Plug 'cespare/vim-toml', {'branch': 'main'}
+Plug 'stephpy/vim-yaml'
+Plug 'rust-lang/rust.vim'
+Plug 'plasticboy/vim-markdown'
+
+Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ryanoasis/vim-devicons'
+Plug 'scrooloose/nerdcommenter'
+Plug 'sheerun/vim-polyglot'
+Plug 'jiangmiao/auto-pairs'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tpope/vim-fugitive'
+Plug 'davidhalter/jedi-vim'
+Plug 'vim-scripts/indentpython.vim'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'PhilRunninger/nerdtree-visual-selection'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+
+"colorscheme gruvbox
+let g:bargreybars_auto=0
+let g:airline_solorized_bg='dark'
+let g:airline_powerline_fonts=1
+let g:airline#extension#tabline#enable=1
+let g:airline#extension#tabline#left_sep=' '
+let g:airline#extension#tabline#left_alt_sep='|'
+let g:airline#extension#tabline#formatter='unique_tail'
+let NERDTreeQuitOnOpen=1
+
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = '#'
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['nerdtree'] = '#'
+
+
 
 call plug#end()
 
 " Enable autocompletion:
 set wildmode=longest,list,full
 
+
 " Spell-check set to <leader>o, 'o' for 'orthography':
 map <leader>o :setlocal spell! spelllang=en_us<CR>
 
+
 " Splits open to the right != default left.
 set splitbelow splitright
+
 
 " Nerd tree
 map <leader>n :NERDTreeToggle<CR>
@@ -68,12 +146,14 @@ else
 	let NERDTreeBookmarksFile = '~/.vim' . '/NERDTreeBookmarks'
 endif
 
+
 " vimling:
 nm <leader>d :call ToggleDeadKeys()<CR>
 imap <leader>d <esc>:call ToggleDeadKeys()<CR>a
 nm <leader>i :call ToggleIPA()<CR>
 imap <leader>i <esc>:call ToggleIPA()<CR>a
 nm <leader>q :call ToggleProse()<CR>
+
 
 " vim-airline
 if !exists('g:airline_symbols')
@@ -82,6 +162,7 @@ endif
 let g:airline_symbols.colnr = ' C:'
 let g:airline_symbols.linenr = ' L:'
 let g:airline_symbols.maxlinenr = '☰ '
+
 
 " Shortcutting split navigation, saving a keypress:
 map <C-h> <C-w>h
@@ -106,10 +187,12 @@ autocmd BufWritePre *.[ch] %s/\%$/\r/e " add trailing newline for ANSI C standar
 autocmd BufWritePre *neomutt* %s/^--$/-- /e " dash-dash-space signature delimiter in emails
 autocmd BufWritePre * cal cursor(currPos[1], currPos[2])
 
+
 " Turns off highlighting on the bits of code that are changed, so the line that is changed is highlighted but the actual text that has changed stands out on the line and is readable.
 if &diff
     highlight! link DiffText MatchParen
 endif
+
 
 " Function for toggling the bottom statusbar:
 let s:hidden_all = 0
@@ -128,5 +211,6 @@ function! ToggleHiddenAll()
         set showcmd
     endif
 endfunction
+
 
 nnoremap <leader>h :call ToggleHiddenAll()<CR>
