@@ -4,6 +4,9 @@
 [core]
 	editor = nvim
 
+[init]
+  defaultBranch = main
+
 [alias]
     a = add .
     p  = push origin
