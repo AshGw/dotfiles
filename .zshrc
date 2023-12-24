@@ -165,8 +165,21 @@ if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
 
-# generates github ssh keys
+################################## Functions section ###########################################
+
+
+# just paste the key after running this 
 ghkey() {
     chmod +x ~/.ssh/_gh_gen.sh
      ~/.ssh/_gh_gen.sh
 }
+
+# terminate them all 
+tercon() {
+	for c in $(docker ps -a | tail -n+2 | awk '{print $1}'); do
+  		docker stop "${c}" || :
+  		docker rm "${c}"
+	done
+}
+
+
