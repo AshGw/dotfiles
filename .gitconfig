@@ -1,11 +1,11 @@
 [user]
-	email = AshrefGw@proton.me
-	name = AshGw
+    email = AshrefGw@proton.me
+    name = AshGw
 [core]
-	editor = nvim
+    editor = nvim
 
 [init]
-  defaultBranch = main
+    defaultBranch = main
 
 [alias]
     a = add .
@@ -24,3 +24,7 @@
     last = log -1 HEAD
     amend = commit --amend
     l  = log --graph --pretty=format:'%C(auto)%h -%d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    review = log -p --max-count=1
+    lsr = ls-remote
+
+
