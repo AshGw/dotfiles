@@ -43,7 +43,7 @@ alias \
 	v="nvim" \
 	ts="pnpm ts-node" \
 	t="touch" \
-	p="python3" \
+	p="python3 -m" \
 	reload=". ~/.zshrc" \
 	y="rm -rf"\
 	b="cd .."  \
