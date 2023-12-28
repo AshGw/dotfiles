@@ -51,6 +51,7 @@ alias \
 	bbb="cd ...."   \
 	bbbb="cd ....."  \
 	bbbbb="cd ......" \
+	ccp="xclip -sel clip <" \
 	x="chmod +x" 
 
 
@@ -181,5 +182,3 @@ tercon() {
   		docker rm "${c}"
 	done
 }
-
-
