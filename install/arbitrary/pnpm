@@ -8,3 +8,5 @@ echo '# pnpm' >> ~/.zshrc \
     && echo '  *":$PNPM_HOME:"*) ;;' >> ~/.zshrc \
     && echo '  *) export PATH="$PNPM_HOME:$PATH" ;;' >> ~/.zshrc \
     && echo 'esac' >> ~/.zshrc
+
+source ~/.zshrc && pnpm i -g typescript ts-node eslint prettier
