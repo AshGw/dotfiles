@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# prerequisites
+# some distros be acting up
 source_or_dot() {
   if command -v source &> /dev/null; then
     source "$1"
@@ -16,15 +16,18 @@ if ! command -v xz &> /dev/null; then
     echo "xz not found. Installing xz-utils on Debian..."
     sudo apt update && sudo apt -y install xz-utils
   else
-    echo "xz not found, and you are not on Debian. Exiting."
+    echo "xz not found, and you are not on Debian, install it with your package manager. Exiting."
     exit 1
   fi
 fi
 
+echo -e "\e[1;32mInstalling nix..\e[0m"
+
 sh <(curl -L https://nixos.org/nix/install) --no-daemon
 source_or_dot ~/.nix-profile/etc/profile.d/nix.sh
 
-echo "installing packages.."
+echo -e "\e[1;32mInstalling all the necessary packages..\e[0m"
+
 # chad packages installation
 nix-env -iA nixpkgs.git \
     nixpkgs.curl \
@@ -59,6 +62,7 @@ nix-env -iA nixpkgs.git \
     nixpkgs.tor \
     nixpkgs.tor-browser
 
+echo -e "\e[1;32mThe whole 9 setup..\e[0m"
 
 # tmux plugin manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -79,6 +83,9 @@ sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply ashgw
 mkdir ~/.config ~/.ssh ~/.config/nvim ~/.config/zathura ~/.config/neofetch ~/.config/picom ~/.config/polybar ~/.config/i3 
 
 # dotfiles mapping
+
+echo -e "\e[1;32mCopying the files into $HOME..\e[0m"
+
 declare -A dotfiles=(
   [".zshrc"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.zshrc"
   [".dircolors"]="https://raw.githubusercontent.com/AshGw/dotfiles/main/.dircolors"
@@ -158,7 +165,18 @@ if [ "$ans" == "y" ]; then
     bash <(curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/install/proprietary/obsidian)
     echo -e "\e[1;32mObsidian installation is complete!\e[0m"
 else
-    echo "Skipping installation of proprietary software."
+    echo "Skipping the proprietary software installation."
+fi
+
+source_or_dot ~/.zshrc
+
+read -p $'Want to to set up GitHub SSH keys now? (y/n): ' ans
+
+if [ "$ans" == "y" ]; then
+    ghkey
+    echo -e "\e[1;32mDone! The key has been copied to your clipboard. Go paste it now on GitHub.\e[0m"
+else
+    echo "Aight, maybe later. You can run 'ghkey' whenever you're ready to set it up."
 fi
 
 echo -e "\e[1;32mBootstrapping is complete!\e[0m"
