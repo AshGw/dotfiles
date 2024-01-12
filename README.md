@@ -3,6 +3,6 @@
 run
 
 ```shell
-bash <(curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/install/install)
+bash <(curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/install/bootstrap)
 ```
-> This setup is platform agnostic
+> This setup is platform agnostic.
