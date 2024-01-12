@@ -80,7 +80,26 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 rm -rf ~/.zshrc
 sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply ashgw
 
-mkdir ~/.config ~/.ssh ~/.config/nvim ~/.config/zathura ~/.config/neofetch ~/.config/picom ~/.config/polybar ~/.config/i3 
+directories=(
+    "~/.config"
+    "~/.ssh"
+    "~/.config/nvim"
+    "~/.config/zathura"
+    "~/.config/neofetch"
+    "~/.config/picom"
+    "~/.config/polybar"
+    "~/.config/i3"
+)
+
+for dir in "${directories[@]}"; do
+    if [ ! -e "${dir}" ]; then
+        echo "Creating directory: ${dir}"
+        mkdir -p "${dir}"
+    else
+        echo "Directory already exists: ${dir}"
+    fi
+done
+
 
 # dotfiles mapping
 
@@ -113,13 +132,8 @@ for file in "${!dotfiles[@]}"; do
 done
 
 # zsh final confs
-  echo '#Nix' >> ~/.zshrc
-  echo '. ~/.nix-profile/etc/profile.d/nix.sh' >> ~/.zshrc
-
-
-  # sourcing
-  zsh
-  source_or_dot ~/.zshrc
+echo '#Nix' >> ~/.zshrc
+echo '. ~/.nix-profile/etc/profile.d/nix.sh' >> ~/.zshrc
 
 ##############################################
 #### now for the extra shit 
@@ -156,7 +170,7 @@ else
     echo "Skipping installation of arbitrary dev packages."
 fi
 
-#############  ion like this but fuck it
+#####
 
 read -p $'Do you by any chance want to install some proprietary software? (y/n)\nThe list currently contains: Obsidian: ' ans
 
@@ -168,7 +182,6 @@ else
     echo "Skipping the proprietary software installation."
 fi
 
-source_or_dot ~/.zshrc
 
 read -p $'Want to to set up GitHub SSH keys now? (y/n): ' ans
 
@@ -181,7 +194,12 @@ fi
 
 echo -e "\e[1;32mBootstrapping is complete!\e[0m"
 
+source_or_dot ~/.zshrc
 
+if [ "$(ps -p $$ -o comm=)" != "zsh" ]; then
+    # switch to zsh
+    zsh
+fi
 
 
 
