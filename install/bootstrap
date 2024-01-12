@@ -36,6 +36,8 @@ nix-env -iA nixpkgs.git \
     nixpkgs.neovim \
     nixpkgs.tmux \
     nixpkgs.bat \
+    nixpkgs.python3 \
+    nixpkgs.openssh \
     nixpkgs.neofetch \
     nixpkgs.tree \
     nixpkgs.htop \
@@ -78,28 +80,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 
 rm -rf ~/.zshrc
-sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply ashgw
 
-directories=(
-    "~/.config"
-    "~/.ssh"
-    "~/.config/nvim"
-    "~/.config/zathura"
-    "~/.config/neofetch"
-    "~/.config/picom"
-    "~/.config/polybar"
-    "~/.config/i3"
-)
-
-for dir in "${directories[@]}"; do
-    if [ ! -e "${dir}" ]; then
-        echo "Creating directory: ${dir}"
-        mkdir -p "${dir}"
-    else
-        echo "Directory already exists: ${dir}"
-    fi
-done
-
+mkdir ~/.config ~/.ssh ~/.config/nvim ~/.config/zathura ~/.config/neofetch ~/.config/picom ~/.config/polybar ~/.config/i3 
 
 # dotfiles mapping
 
@@ -186,7 +168,7 @@ fi
 read -p $'Want to to set up GitHub SSH keys now? (y/n): ' ans
 
 if [ "$ans" == "y" ]; then
-    ghkey
+    bash <(curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/.ssh/_gh_gen.sh)
     echo -e "\e[1;32mDone! The key has been copied to your clipboard. Go paste it now on GitHub.\e[0m"
 else
     echo "Aight, maybe later. You can run 'ghkey' whenever you're ready to set it up."
