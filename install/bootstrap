@@ -10,7 +10,6 @@ source_or_dot() {
 }
 
 # nix setup
- # xz is needed for nix doe
 if ! command -v xz &> /dev/null; then
   if [ -f "/etc/debian_version" ]; then
     echo "xz not found. Installing xz-utils on Debian..."
@@ -77,8 +76,6 @@ curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolor
 # zsh setup
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" <<< $'\n'
-
-
 rm -rf ~/.zshrc
 
 mkdir ~/.config ~/.ssh ~/.config/nvim ~/.config/zathura ~/.config/neofetch ~/.config/picom ~/.config/polybar ~/.config/i3 
@@ -123,21 +120,22 @@ echo '. ~/.nix-profile/etc/profile.d/nix.sh' >> ~/.zshrc
 read -p "Do you want to install all the arbitrary dev packages? (y/n): " ans
 
 if [ "$ans" == "y" ]; then
-    echo -e "\e[1;32mInstalling pnpm...\e[0m"
-    bash <(curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/install/arbitrary/pnpm)
-    echo -e "\e[1;32mpnpm installation done!\e[0m"
-
+    
     echo -e "\e[1;32mInstalling conda...\e[0m"
     bash <(curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/install/arbitrary/conda)
     echo -e "\e[1;32mconda installation done!\e[0m"
 
-    echo -e "\e[1;32mInstalling poetry...\e[0m"
-    bash <(curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/install/arbitrary/poetry)
-    echo -e "\e[1;32mpoetry installation done!\e[0m"
-
     echo -e "\e[1;32mInstalling node...\e[0m"
     bash <(curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/install/arbitrary/node)
     echo -e "\e[1;32mnode installation done!\e[0m"
+
+    echo -e "\e[1;32mInstalling pnpm...\e[0m"
+    bash <(curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/install/arbitrary/pnpm)
+    echo -e "\e[1;32mpnpm installation done!\e[0m"
+
+    echo -e "\e[1;32mInstalling poetry...\e[0m"
+    bash <(curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/install/arbitrary/poetry)
+    echo -e "\e[1;32mpoetry installation done!\e[0m"
 
     echo -e "\e[1;32mInstalling go...\e[0m"
     bash <(curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/install/arbitrary/go)
@@ -152,7 +150,7 @@ else
     echo "Skipping installation of arbitrary dev packages."
 fi
 
-#####
+#############
 
 read -p $'Do you by any chance want to install some proprietary software? (y/n)\nThe list currently contains: Obsidian: ' ans
 
@@ -164,6 +162,7 @@ else
     echo "Skipping the proprietary software installation."
 fi
 
+###########
 
 read -p $'Want to to set up GitHub SSH keys now? (y/n): ' ans
 
@@ -175,13 +174,7 @@ else
 fi
 
 echo -e "\e[1;32mBootstrapping is complete!\e[0m"
-
-source_or_dot ~/.zshrc
-
-if [ "$(ps -p $$ -o comm=)" != "zsh" ]; then
-    # switch to zsh
-    zsh
-fi
+echo -e "\e[1;36mYou might restart your shell for changes to take place\e[0m"
 
 
 
