@@ -113,3 +113,50 @@ done
   # sourcing
   zsh
   source_or_dot ~/.zshrc
+
+echo -e "\e[1;32mBootstrapping is complete!\e[0m"
+
+##############################################
+#### now for the extra shit 
+
+read -p "Do you want to install all the arbitrary dev packages? (y/n): " ans
+
+if [ "$ans" == "y" ]; then
+    echo -e "\e[1;32mInstalling pnpm...\e[0m"
+    bash <(curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/install/arbitrary/pnpm)
+    echo -e "\e[1;32mpnpm installation done!\e[0m"
+
+    echo -e "\e[1;32mInstalling conda...\e[0m"
+    bash <(curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/install/arbitrary/conda)
+    echo -e "\e[1;32mconda installation done!\e[0m"
+
+    echo -e "\e[1;32mInstalling poetry...\e[0m"
+    bash <(curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/install/arbitrary/poetry)
+    echo -e "\e[1;32mpoetry installation done!\e[0m"
+
+    echo -e "\e[1;32mInstalling node...\e[0m"
+    bash <(curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/install/arbitrary/node)
+    echo -e "\e[1;32mnode installation done!\e[0m"
+
+    echo -e "\e[1;32mInstalling go...\e[0m"
+    bash <(curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/install/arbitrary/go)
+    echo -e "\e[1;32mgo installation done!\e[0m"
+
+    echo -e "\e[1;32mInstalling rust...\e[0m"
+    bash <(curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/install/arbitrary/rust)
+    echo -e "\e[1;32mrust installation done!\e[0m"
+
+    echo -e "\e[1;32mInstallation of arbitrary dev packages completed.\e[0m"
+else
+    echo "Skipping installation of arbitrary dev packages."
+fi
+
+
+
+
+
+
+
+
+
+
