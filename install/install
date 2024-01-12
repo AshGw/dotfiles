@@ -114,8 +114,6 @@ done
   zsh
   source_or_dot ~/.zshrc
 
-echo -e "\e[1;32mBootstrapping is complete!\e[0m"
-
 ##############################################
 #### now for the extra shit 
 
@@ -150,6 +148,20 @@ if [ "$ans" == "y" ]; then
 else
     echo "Skipping installation of arbitrary dev packages."
 fi
+
+#############  ion like this but fuck it
+
+read -p $'Do you by any chance want to install some proprietary software? (y/n)\nThe list currently contains: Obsidian: ' ans
+
+if [ "$ans" == "y" ]; then
+    echo -e "\e[1;32mInstalling Obsidian...\e[0m"
+    bash <(curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/install/proprietary/obsidian)
+    echo -e "\e[1;32mObsidian installation is complete!\e[0m"
+else
+    echo "Skipping installation of proprietary software."
+fi
+
+echo -e "\e[1;32mBootstrapping is complete!\e[0m"
 
 
 
