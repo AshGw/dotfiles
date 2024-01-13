@@ -52,7 +52,12 @@ alias \
 	bbbb="cd ....."  \
 	bbbbb="cd ......" \
 	ccp="xclip -sel clip <" \
-	x="chmod +x" 
+	x="chmod +x" \
+	d="docker" \ 
+	d-stopall="docker stop $(docker ps -a -q)" \ 
+	d-restratall="docker restart $(docker ps -a -q)" \ 
+	d-startall="docker start $(docker ps -a -q)" \ 
+	d-rmall="docker rm $(docker ps -a -q)" 
 
 
 # Colorize commands when possible.
