@@ -51,6 +51,7 @@ alias \
 	bbb="cd ...."   \
 	bbbb="cd ....."  \
 	bbbbb="cd ......" \
+        bat="\bat --theme=GitHub" \
 	ccp="xclip -sel clip <" \
 	x="chmod +x" \
 	d="docker" \ 
