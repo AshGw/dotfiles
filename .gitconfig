@@ -1,8 +1,16 @@
 [user]
     email = AshrefGw@proton.me
     name = AshGw
+	signingkey = /home/ashgw/.ssh/github.pub
+
 [core]
     editor = nvim
+
+[commit]
+	gpgsign = true
+
+[gpg]
+	format = ssh
 
 [init]
     defaultBranch = main
