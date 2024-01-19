@@ -54,11 +54,11 @@ alias \
         bat="\bat --theme=GitHub" \
 	ccp="xclip -sel clip <" \
 	x="chmod +x" \
-	d="docker" \ 
-	d-stopall="docker stop $(docker ps -a -q)" \ 
-	d-restratall="docker restart $(docker ps -a -q)" \ 
-	d-startall="docker start $(docker ps -a -q)" \ 
-	d-rmall="docker rm $(docker ps -a -q)" 
+	d="docker" \
+	d-stopall="docker stop $(docker ps -a -q)" \
+	d-restratall="docker restart $(docker ps -a -q)" \
+	d-startall="docker start $(docker ps -a -q)" \
+	d-rmall="docker rm $(docker ps -a -q)"
 
 
 # Colorize commands when possible.
@@ -79,7 +79,7 @@ export LC_ALL=C.UTF-8
 
 
 
-############### vol 2 
+############### vol 2
 
 
 setopt autocd              # change directory just by typing its name
@@ -175,13 +175,13 @@ fi
 ################################## Functions section ###########################################
 
 
-# just paste the key after running this 
+# just paste the key after running this
 ghkey() {
     chmod +x ~/.ssh/_gh_gen.sh
      ~/.ssh/_gh_gen.sh
 }
 
-# terminate them all 
+# terminate all conatainers
 tercon() {
 	for c in $(docker ps -a | tail -n+2 | awk '{print $1}'); do
   		docker stop "${c}" || :
@@ -203,9 +203,6 @@ man () {
 }
 
 # Create a new directory & cd into it
-mdc () {
+mdd () {
  mkdir -p "$@" && cd "$@"
 }
-
-
-
