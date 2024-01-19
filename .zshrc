@@ -175,7 +175,7 @@ fi
 ################################## Functions section ###########################################
 
 
-# just paste the key after running this
+# generate new SSH keys for github, run this u'll get the pub key copied to ur clipboard,just paste it
 ghkey() {
     chmod +x ~/.ssh/_gh_gen.sh
      ~/.ssh/_gh_gen.sh
@@ -189,7 +189,7 @@ tercon() {
 	done
 }
 
-# Shows pretty `man` page.
+# shows pretty `man` page.
 man () {
   env \
     LESS_TERMCAP_mb=$(printf "\e[1;31m") \
@@ -202,7 +202,26 @@ man () {
       man "$@"
 }
 
-# Create a new directory & cd into it
+# create a new directory & directly cd into it
 mdd () {
  mkdir -p "$@" && cd "$@"
+}
+
+
+
+# encrypt a file with a passphrase
+pass-enc() {
+    local input_file=$1
+    local output_file="${input_file}.gpg"
+    gpg --symmetric --cipher-algo AES256 --quiet --batch --yes --output "$output_file" "$input_file"
+    shred -u "$input_file"
+    echo -e "\e[1;32mEncrypted $input_file and saved as: $output_file\e[0m"
+}
+
+# decrypt a file with a passphrase
+pass-dec() {
+    local input_file=$1
+    local output_file="${input_file%.gpg}"
+    gpg --use-agent --quiet --batch --yes --decrypt --cipher-algo AES256 --output "$output_file" "$input_file" 2>/dev/null
+    echo -e "\e[1;32mDecrypted $input_file and saved as: $output_file\e[0m"
 }
