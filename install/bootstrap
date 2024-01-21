@@ -172,7 +172,7 @@ fi
 ## server ssh confs ( protection ) 
 read -p $'Want to to set up the server SSH confs ? (y/n): ' ans
 if [ "$ans" == "y" ]; then
-    curl -o /etc/ssh/sshd_config https://raw.githubusercontent.com/AshGw/dotfiles/main/other/sshd_config
+    curl -o /etc/ssh/sshd_config https://raw.githubusercontent.com/AshGw/dotfiles/main/other/ssh/sshd_config
     touch ~/.ssh/authorized_keys
     mkdir -p /run/sshd
     sudo service ssh reload
