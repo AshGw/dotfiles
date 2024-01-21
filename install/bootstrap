@@ -166,6 +166,18 @@ else
     echo "Skipping the proprietary software installation."
 fi
 
+##### Various confs 
+
+## server ssh confs ( protection ) 
+read -p $'Want to to set up the server SSH confs ? (y/n): ' ans
+if [ "$ans" == "y" ]; then
+    curl -o /etc/ssh/sshd_config https://raw.githubusercontent.com/AshGw/dotfiles/main/other/sshd_config
+    touch ~/.ssh/authorized_keys
+    mkdir -p /run/sshd
+    sudo service ssh reload
+else
+    echo "Skipping.."
+fi
 ###########
 
 read -p $'Want to to set up GitHub SSH keys now? (y/n): ' ans
@@ -177,6 +189,9 @@ else
     echo "Aight, maybe later. You can run 'ghkey' whenever you're ready to set it up."
 fi
 
+
+
+#################################################
 echo -e "\e[1;32mBootstrapping is complete!\e[0m"
 echo -e "\e[1;36mYou might restart your shell for changes to take place\e[0m"
 
