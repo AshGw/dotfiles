@@ -197,7 +197,7 @@ fi
 if [ "$github_setup_done" == true ]; then
     echo "encrypted data setup" 
     mkdir ~/.sauce
-    curl -o ~/.sauce https://raw.githubusercontent.com/AshGw/dotfiles/main/other/crypt/lc.py
+    curl -o ~/.sauce/lc.py https://raw.githubusercontent.com/AshGw/dotfiles/main/other/crypt/lc.py
 
     cd ~/.sauce
     pip install litecrypt 
