@@ -68,7 +68,8 @@ nix-env -iA nixpkgs.git \
     nixpkgs.tor-browser
 
 echo -e "\e[1;32mThe whole 9 setup..\e[0m"
-
+#
+mkdir work trash personal 
 # tmux plugin manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
@@ -180,15 +181,32 @@ else
 fi
 ###########
 
+github_setup_done=false
 read -p $'Want to to set up GitHub SSH keys now? (y/n): ' ans
 
 if [ "$ans" == "y" ]; then
     bash <(curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/.ssh/_gh_gen.sh)
     echo -e "\e[1;32mDone! The key has been copied to your clipboard. Go paste it now on GitHub.\e[0m"
+    github_setup_done=true
+
 else
     echo "Aight, maybe later. You can run 'ghkey' whenever you're ready to set it up."
 fi
 
+
+if [ "$github_setup_done" == true ]; then
+    echo "encrypted data setup" 
+    mkdir ~/.sauce
+    cd ~/.sauce
+    pip install litecrypt 
+    git clone git@github.com:AshGw/_.git
+    git clone git@github.com:AshGw/envs.git
+    git clone git@github.com:AshGw/obsidian.git
+    git clone git@github.com:AshGw/_2.git   
+    cd 
+else
+    echo "GitHub setup not done. skipping"
+fi
 
 
 #################################################

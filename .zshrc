@@ -210,18 +210,17 @@ mdd () {
 
 
 # encrypt a file with a passphrase
-pass-enc() {
+passenc() {
     local input_file=$1
     local output_file="${input_file}.gpg"
-    gpg --symmetric --cipher-algo AES256 --quiet --batch --yes --output "$output_file" "$input_file"
+    gpg --symmetric --cipher-algo AES256 --batch --yes --output "$output_file" "$input_file"
     shred -u "$input_file"
     echo -e "\e[1;32mEncrypted $input_file and saved as: $output_file\e[0m"
 }
 
 # decrypt a file with a passphrase
-pass-dec() {
+passdec() {
     local input_file=$1
-    local output_file="${input_file%.gpg}"
-    gpg --use-agent --quiet --batch --yes --decrypt --cipher-algo AES256 --output "$output_file" "$input_file" 2>/dev/null
-    echo -e "\e[1;32mDecrypted $input_file and saved as: $output_file\e[0m"
+    gpg --decrypt --cipher-algo AES256 --batch --yes  "$input_file" 2>/dev/null
+    echo -e "\e[1;32mDecrypted $input_file\e[0m"
 }
