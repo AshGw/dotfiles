@@ -115,9 +115,11 @@ for file in "${!dotfiles[@]}"; do
   curl -o "$HOME/$file" "${dotfiles[$file]}"
 done
 
-# zsh final confs
+#### zsh final confs
 echo '#Nix' >> ~/.zshrc
 echo '. ~/.nix-profile/etc/profile.d/nix.sh' >> ~/.zshrc
+      ### zsh plugins ###
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
 ##############################################
 #### now for the extra shit 
