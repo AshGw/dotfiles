@@ -9,7 +9,7 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 ZSH_THEME="robbyrussell"
 HIST_STAMPS="dd/mm/yyyy"
-plugins=(git zsh-autosuggestions)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 
