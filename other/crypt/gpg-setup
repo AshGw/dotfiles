@@ -36,6 +36,9 @@ gpg --allow-secret-key-import --import "$GPG_PRIVATE_KEY_FILE"
 gpg --armor --export $GPG_PRIVATE_KEY_ID | xclip -selection clipboard
 
 echo -e "\e[1;32mYour public GPG key has been copied to your clipboard. Go paste it where you need to.\e[0m"
+"Last step I need yu to trust the key G, choose a trust level & then type 'trust' in the  gpg interface, type 'q' when done"
+gpg -k 
+gpg --edit-key $GPG_PRIVATE_KEY_ID
 echo "I guess my business is over here. I'll clean up the mess."
 shred -u -z -n 69 "$AES_KEY_FILE"
 shred -u -z -n 69 "$GPG_PRIVATE_KEY_FILE"
