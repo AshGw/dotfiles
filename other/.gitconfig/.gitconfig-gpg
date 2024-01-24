@@ -1,0 +1,35 @@
+[user]
+    email = AshrefGw@proton.me
+    name = AshGw
+    signingkey =  B2B519EB7140DE0E28FEF8B5980D27A4090D768F
+[gpg]
+    program = gpg
+
+[commit]
+    gpgsign = true
+
+[init]
+    defaultBranch = main
+
+[core]
+    editor = nvim
+
+[alias]
+    a = add .
+    p  = push origin
+    pu  = pull origin
+    pprune =  pull --prune
+    st  = status
+    df  = diff
+    c = commit -am
+    ci  = commit -s
+    w   = whatchanged --abbrev-commit
+    r = rebase -i
+    ls  = ls-files
+    unadd = reset HEAD
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    amend = commit --amend
+    l  = log --graph --pretty=format:'%C(auto)%h -%d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    review = log -p --max-count=1
+    lsr = ls-remote
