@@ -32,7 +32,7 @@ cd
 curl -o "$GIT_CONFIG_FILE" https://raw.githubusercontent.com/AshGw/dotfiles/main/other/.gitconfig/.gitconfig-gpg
 export GPG_TTY=$(tty)
 export GPG_TTY=$(tty) >> ~/.zshrc
-gpg --allow-secret-key-import --import "$GPG_PRIVATE_KEY_FILE"
+gpg --import "$GPG_PRIVATE_KEY_FILE"
 gpg --armor --export $GPG_PRIVATE_KEY_ID | xclip -selection clipboard
 
 echo -e "\e[1;32mYour public GPG key has been copied to your clipboard. Go paste it where you need to.\e[0m"
