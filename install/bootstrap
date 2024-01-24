@@ -16,7 +16,7 @@ if ! command -v xz &> /dev/null; then
     echo "xz not found. Installing xz-utils on Debian..."
     sudo apt update
     sudo apt -y install xz-utils
-    echo "Also installing build essentials..:
+    echo "Also installing build essentials..:"
     sudo apt  -y install build-essential
   else
     echo "xz not found, and you are not on Debian, install it with your package manager to continue. Exiting."
