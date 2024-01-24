@@ -160,7 +160,7 @@ fi
 
 #############
 
-read -p $'Do you by any chance want to install some proprietary software? (y/n)\nThe list currently contains: Obsidian: ' ans
+read -p $"Do you by any chance want to install some proprietary software? (y/n)\nThe list currently contains: Obsidian: " ans
 
 if [ "$ans" == "y" ]; then
     echo -e "\e[1;32mInstalling Obsidian...\e[0m"
@@ -173,12 +173,12 @@ fi
 
 echo "Want to to set up GitHub SSH keys now?"
 echo "(U will only need them to authenticate for the `post-bootstrap` step)"
-read -p $'What u say ?(y/n): ' ans
+read -p $"What u say ?(y/n): " ans
 
 if [ "$ans" == "y" ]; then
     bash <(curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/.ssh/_gh_gen.sh)
     echo -e "\e[1;32mDone! The public key has been copied to your clipboard. Go paste it now on GitHub.\e[0m"
-    github_setup_done=true
+  
 
 else
     echo "Aight, maybe later. You can run `ghkey` whenever youre ready to set it up."
