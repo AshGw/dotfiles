@@ -5,17 +5,3 @@ chmod +x /tmp/gpg-setup.sh
 rm /tmp/gpg-setup.sh
 ##############
 
-##############
-
-echo "Importing your encrypted data" 
-mkdir ~/.sauce
-
-git clone git@github.com:AshGw/.sauce.git ~/.sauce
-
-git clone git@github.com:AshGw/_.git ~/.sauce/
-git clone git@github.com:AshGw/envs.git  ~/.sauce/envs
-git clone git@github.com:AshGw/obsidian.git  ~/.sauce/obsidian
-git clone git@github.com:AshGw/_2.git    ~/.sauce/_2
-curl -o ~/.sauce/lc.py https://raw.githubusercontent.com/AshGw/dotfiles/main/other/crypt/lc.py
- 
-##############
