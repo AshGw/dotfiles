@@ -1,0 +1,6 @@
+### GPG setup
+curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/other/crypt/gpg-setup -o /tmp/gpg-setup.sh
+chmod +x /tmp/gpg-setup.sh
+/tmp/gpg-setup.sh
+rm /tmp/gpg-setup.sh
+###
