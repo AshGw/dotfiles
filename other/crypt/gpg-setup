@@ -5,9 +5,12 @@ AES_KEY_FILE=$KEY_DIR/.key
 GIT_CONFIG_FILE=~/.gitconfig
 GPG_PRIVATE_KEY_FILE=$KEY_DIR/gpg_prv.asc
 GPG_PRIVATE_KEY_ID=1CDA8CFFDFBA9148AC26A01F6BAF3BC4429860D3
+
 [ "$1" = "-p" ] && PYTHON=$2 || PYTHON="python3"
 
+pip install -U pip
 pip install litecrypt
+
 git clone git@github.com:AshGw/.keys.git ~/.keys
 
 echo -n "Enter your AES-256 key: "
