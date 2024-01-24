@@ -1,7 +1,7 @@
 [user]
     email = AshrefGw@proton.me
     name = AshGw
-    signingkey =  B2B519EB7140DE0E28FEF8B5980D27A4090D768F
+    signingkey =  1CDA8CFFDFBA9148AC26A01F6BAF3BC4429860D3
 [gpg]
     program = gpg
 
