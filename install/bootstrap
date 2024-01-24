@@ -170,51 +170,21 @@ else
     echo "Skipping the proprietary software installation."
 fi
 
-##### Various confs 
 
-## server ssh confs ( protection ) 
-read -p $'Want to to set up the server SSH confs ? (y/n): ' ans
-if [ "$ans" == "y" ]; then
-    curl -o /etc/ssh/sshd_config https://raw.githubusercontent.com/AshGw/dotfiles/main/other/ssh/sshd_config
-    touch ~/.ssh/authorized_keys
-    mkdir -p /run/sshd
-    sudo service ssh reload
-else
-    echo "Skipping.."
-fi
-###########
-
-github_setup_done=false
-read -p $'Want to to set up GitHub SSH keys now? (y/n): ' ans
+echo "Want to to set up GitHub SSH keys now?"
+echo "(U will only need them to authenticate for the `post-bootstrap` step)"
+read -p $'What u say ?(y/n): ' ans
 
 if [ "$ans" == "y" ]; then
     bash <(curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/.ssh/_gh_gen.sh)
-    echo -e "\e[1;32mDone! The key has been copied to your clipboard. Go paste it now on GitHub.\e[0m"
+    echo -e "\e[1;32mDone! The public key has been copied to your clipboard. Go paste it now on GitHub.\e[0m"
     github_setup_done=true
 
 else
-    echo "Aight, maybe later. You can run 'ghkey' whenever you're ready to set it up."
+    echo "Aight, maybe later. You can run `ghkey` whenever youre ready to set it up."
 fi
 
 
-if [ "$github_setup_done" == true ]; then
-    echo "encrypted data setup" 
-    mkdir ~/.sauce
-    curl -o ~/.sauce/lc.py https://raw.githubusercontent.com/AshGw/dotfiles/main/other/crypt/lc.py
-
-    cd ~/.sauce
-    pip install litecrypt 
-    git clone git@github.com:AshGw/_.git
-    git clone git@github.com:AshGw/envs.git
-    git clone git@github.com:AshGw/obsidian.git
-    git clone git@github.com:AshGw/_2.git   
-    cd 
-else
-    echo "GitHub setup not done. skipping"
-fi
-
-
-#################################################
 echo -e "\e[1;32mBootstrapping is complete!\e[0m"
 echo -e "\e[1;36mYou might restart your shell for changes to take place\e[0m"
 
