@@ -51,8 +51,8 @@ alias \
 	bbb="cd ...."   \
 	bbbb="cd ....."  \
 	bbbbb="cd ......" \
-        bat="\bat --theme=GitHub" \
-	ccp="xclip -sel clip <" \
+    bat="\bat --theme=GitHub" \
+    j="just"\
 	x="chmod +x" \
 	d="docker" \
 	d-stopall="docker stop $(docker ps -a -q)" \
@@ -177,8 +177,7 @@ fi
 
 # generate new SSH keys for github, run this u'll get the pub key copied to ur clipboard,just paste it
 ghkey() {
-    chmod +x ~/.ssh/_gh_gen.sh
-     ~/.ssh/_gh_gen.sh
+    bash ~/.ssh/_gh_gen.sh
 }
 
 # terminate all conatainers
@@ -202,7 +201,7 @@ man () {
       man "$@"
 }
 
-# create a new directory & directly cd into it
+# create a new directory & cd into it
 mdd () {
  mkdir -p "$@" && cd "$@"
 }
@@ -225,7 +224,7 @@ passdec() {
     echo -e "\e[1;32mDecrypted $input_file\e[0m"
 }
 
-#
+# copies the content of a file to the clipboard 
 cpf() {
     if [[ -n $1 && -f $1 ]]; then
         xclip -selection clipboard < $1

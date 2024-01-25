@@ -35,12 +35,12 @@ cd
 curl -o "$GIT_CONFIG_FILE" https://raw.githubusercontent.com/AshGw/dotfiles/main/other/.gitconfig/.gitconfig-gpg
 export GPG_TTY=$(tty)
 echo "export GPG_TTY=$(tty)" >> ~/.zshrc
-echo "default-key $GPG_PRIVATE_KEY_ID"  ~/.gnupg/gpg.conf
+echo "default-key $GPG_PRIVATE_KEY_ID" >> ~/.gnupg/gpg.conf
 gpg --import "$GPG_PRIVATE_KEY_FILE"
 gpg --armor --export $GPG_PRIVATE_KEY_ID | xclip -selection clipboard
 
 echo -e "\e[1;32mYour public GPG key has been copied to your clipboard. Go paste it where you need to.\e[0m"
-"Last step I need yu to trust the key G, choose a trust level & then type 'trust' in the  gpg interface, type 'save' when done"
+"Last step I need yu to trust the key G, type 'trust' in the  gpg interface, pick a trust level, type 'save' when done"
 gpg --edit-key $GPG_PRIVATE_KEY_ID
 echo "I guess my business is over here. I'll clean up the mess."
 shred -u -z -n 69 "$AES_KEY_FILE"
