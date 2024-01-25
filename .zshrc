@@ -224,3 +224,13 @@ passdec() {
     gpg --decrypt --cipher-algo AES256 --batch --yes  "$input_file" 2>/dev/null
     echo -e "\e[1;32mDecrypted $input_file\e[0m"
 }
+
+#
+cpf() {
+    if [[ -n $1 && -f $1 ]]; then
+        xclip -selection clipboard < $1
+        echo -e "\e[1;32mContents of '$1' copied to clipboard.\e[0m"
+    else
+        echo "Usage: cpf <filename>"
+    fi
+}
