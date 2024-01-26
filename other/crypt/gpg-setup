@@ -35,7 +35,11 @@ cd
 curl -o "$GIT_CONFIG_FILE" https://raw.githubusercontent.com/AshGw/dotfiles/main/other/.gitconfig/.gitconfig-gpg
 export GPG_TTY=$(tty)
 echo "export GPG_TTY=$(tty)" >> ~/.zshrc
+
 echo "default-key $GPG_PRIVATE_KEY_ID" >> ~/.gnupg/gpg.conf
+echo "default-cache-ttl 604800" >> ~/.gnupg/gpg-agent.conf
+echo "max-cache-ttl 604800" >> ~/.gnupg/gpg-agent.conf
+
 gpg --import "$GPG_PRIVATE_KEY_FILE"
 gpg --armor --export $GPG_PRIVATE_KEY_ID | xclip -selection clipboard
 
