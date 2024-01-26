@@ -233,3 +233,12 @@ cpf() {
         echo "Usage: cpf <filename>"
     fi
 }
+
+# gpg dameon  starts acting up, reload it
+loadpg() {
+   pkill -9 gpg-agent
+   export GPG_TTY=$(tty)
+}
+
+
+
