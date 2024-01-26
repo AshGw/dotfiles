@@ -6,5 +6,5 @@ curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/other/crypt/gpg-se
 bash /tmp/$TEMP_FILE
 rm /tmp/$TEMP_FILE
 ### encrypted personal files import
-git clone git@github.com:AshGw/personal.git
+git clone git@github.com:AshGw/personal.git ~/personal
 ### 
