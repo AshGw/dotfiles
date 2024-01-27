@@ -1,4 +1,16 @@
 #!/bin/bash
+# zsh needs to be installed natively, or else it brings trouble in some environments as 
+# $HOM/.nix-profile/bin/zsh is not recognized as a valid shell
+if ! command -v zsh &> /dev/null; then
+  if [ -f "/etc/debian_version" ]; then
+    echo "Zsh not found. Installing zsh on Debian..."
+    sudo apt update
+    sudo apt -y install zsh
+  else
+    echo "Zsh not found, and you are not on Debian. Install it with your package manager to continue. Exiting."
+    exit 1
+  fi
+fi
 
 # nix setup
 if ! command -v xz &> /dev/null; then
@@ -25,7 +37,6 @@ echo -e "\e[1;32mInstalling all the necessary packages..\e[0m"
 nix-env -iA nixpkgs.git \
     nixpkgs.curl \
     nixpkgs.wget \
-    nixpkgs.zsh \
     nixpkgs.neovim \
     nixpkgs.tmux \
     nixpkgs.bat \
