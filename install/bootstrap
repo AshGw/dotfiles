@@ -1,15 +1,5 @@
 #!/bin/bash
 
-
-# some distros be acting up
-source_or_dot() {
-  if command -v source &> /dev/null; then
-    source "$1"
-  else
-    . "$1"
-  fi
-}
-
 # nix setup
 if ! command -v xz &> /dev/null; then
   if [ -f "/etc/debian_version" ]; then
@@ -27,7 +17,7 @@ fi
 echo -e "\e[1;32mInstalling nix..\e[0m"
 
 sh <(curl -L https://nixos.org/nix/install) --no-daemon
-source_or_dot ~/.nix-profile/etc/profile.d/nix.sh
+. ~/.nix-profile/etc/profile.d/nix.sh
 
 echo -e "\e[1;32mInstalling all the necessary packages..\e[0m"
 
