@@ -57,9 +57,6 @@ nix-env -iA nixpkgs.git \
     nixpkgs.direnv \
     nixpkgs.librewolf \
     nixpkgs.chromium \
-    nixpkgs.docker \
-    nixpkgs.docker-compose \
-    nixpkgs.kubectl \
     nixpkgs.virtualbox \
     nixpkgs.wireshark \
     nixpkgs.nmap \
