@@ -51,15 +51,20 @@ alias \
 	bbb="cd ...."   \
 	bbbb="cd ....."  \
 	bbbbb="cd ......" \
-    bat="\bat --theme=GitHub" \
-    j="just"\
+    	bat="\bat --theme=GitHub" \
+    	j="just"\
 	x="chmod +x" \
 	d="docker" \
 	d-stopall="docker stop $(docker ps -a -q)" \
 	d-restratall="docker restart $(docker ps -a -q)" \
 	d-startall="docker start $(docker ps -a -q)" \
-	d-rmall="docker rm $(docker ps -a -q)"
+	d-rmall="docker rm $(docker ps -a -q)" \
+	pubip='dig +short myip.opendns.com @resolver1.opendns.com' \
+  	localip='ipconfig getifaddr en1' \ 
+	ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'" \
 
+# listening ports
+alias ports='lsof +c0 -iTCP -sTCP:LISTEN -n -P'
 
 # Colorize commands when possible.
 alias \
