@@ -62,17 +62,7 @@ alias \
 	pubip='dig +short myip.opendns.com @resolver1.opendns.com' \
   	localip='ipconfig getifaddr en1' \ 
 	ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'" \
-
-# listening ports
-alias ports='lsof +c0 -iTCP -sTCP:LISTEN -n -P'
-
-# Colorize commands when possible.
-alias \
-	ls="ls -hN --color=auto --group-directories-first" \
-	grep="grep --color=auto" \
-	diff="diff --color=auto" \
-	ccat="highlight --out-format=ansi" \
-	ip="ip -color=auto"
+	ports='lsof +c0 -iTCP -sTCP:LISTEN -n -P'
 
 # Colors n all so run this: curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark --output ~/.dircolors
 eval `dircolors ~/.dircolors`
@@ -217,16 +207,17 @@ mdd () {
 passenc() {
     local input_file=$1
     local output_file="${input_file}.gpg"
-    gpg --symmetric --cipher-algo AES256 --batch --yes --output "$output_file" "$input_file"
+    gpg --symmetric --cipher-algo AES256 --quiet --batch --yes --output "$output_file" "$input_file"
     shred -u "$input_file"
     echo -e "\e[1;32mEncrypted $input_file and saved as: $output_file\e[0m"
 }
 
-# decrypt a file with a passphrase
+
 passdec() {
     local input_file=$1
-    gpg --decrypt --cipher-algo AES256 --batch --yes  "$input_file" 2>/dev/null
-    echo -e "\e[1;32mDecrypted $input_file\e[0m"
+    local output_file="${input_file%.gpg}"
+    gpg --use-agent --quiet --batch --yes --decrypt --cipher-algo AES256 --output "$output_file" "$input_file" 2>/dev/null
+    echo -e "\e[1;32mDecrypted $input_file and saved as: $output_file\e[0m"
 }
 
 # copies the content of a file to the clipboard 
