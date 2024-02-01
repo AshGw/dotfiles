@@ -1,11 +1,12 @@
 #!/bin/bash
-curl -O -fsSL https://golang.org/dl/go1.19.linux-amd64.tar.gz
-tar xvf go1.19.linux-amd64.tar.gz
-mv go ~/.go
-rm -rf go go1.19.linux-amd64.tar.gz
-sudo chown -R root:root ~/.go
+GO_VERSION=1.19
+INSTALL_DIR=/usr/bin
+curl -O -fsSL https://golang.org/dl/go$GO_VERSION.linux-amd64.tar.gz
+tar xvf go$GO_VERSION.linux-amd64.tar.gz
+sudo mv go $INSTALL_DIR/go
+rm -rf go$GO_VERSION.linux-amd64.tar.gz
+sudo chown -R root:root  $INSTALL_DIR/go
 echo '#go' >> ~/.zshrc
-echo 'export GOPATH=$HOME/.go' >> ~/.zshrc
-echo 'export PATH=$PATH:$HOME/.go/bin' >> ~/.zshrc
+echo 'export PATH=$PATH:/usr/bin/go/bin' >> ~/.zshrc
 # source later 
 #. ~/.zshrc
