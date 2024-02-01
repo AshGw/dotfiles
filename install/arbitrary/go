@@ -5,6 +5,7 @@ mv go ~/.go
 rm -rf go go1.19.linux-amd64.tar.gz
 sudo chown -R root:root ~/.go
 echo '#go' >> ~/.zshrc
+echo 'export GOPATH=$HOME/.go' >> ~/.zshrc
 echo 'export PATH=$PATH:$HOME/.go/bin' >> ~/.zshrc
 # source later 
 #. ~/.zshrc
