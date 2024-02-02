@@ -1,12 +1,14 @@
 # Boilerplate
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
+
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
 ZSH_THEME="robbyrussell"
 HIST_STAMPS="dd/mm/yyyy"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
@@ -20,10 +22,14 @@ if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='code'
 fi
 
+# Disable GPG GUI prompts inside SSH.
+if [[ -n "$SSH_CONNECTION" ]]; then
+  export PINENTRY_USER_DATA='USE_CURSES=1'
+fi
+
 autoload -U colors && colors	# Load colors
 
 # Basic auto/tab complete
-
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
@@ -51,8 +57,9 @@ alias \
 	bbb="cd ...."   \
 	bbbb="cd ....."  \
 	bbbbb="cd ......" \
-    	bat="\bat --theme=GitHub" \
-    	j="just"\
+    bat="\bat --theme=GitHub" \
+    sudo='sudo ' \
+    j="just"\
 	x="chmod +x" \
 	d="docker" \
 	d-stopall="docker stop $(docker ps -a -q)" \
@@ -66,16 +73,6 @@ alias \
 
 # Colors n all so run this: curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark --output ~/.dircolors
 eval `dircolors ~/.dircolors`
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export LC_ALL=C.UTF-8
-
-
-
-############### vol 2
-
 
 setopt autocd              # change directory just by typing its name
 setopt interactivecomments # allow comments in interactive mode
@@ -124,16 +121,10 @@ alias history="history 0"
 TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 
 
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
 force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-        # We have color support; assume it's compliant with Ecma-48
-        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-        # a case would tend to support setf rather than setaf.)
         color_prompt=yes
     else
         color_prompt=
@@ -141,19 +132,6 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 
-precmd() {
-    # Print the previously configured title
-    print -Pnr -- "$TERM_TITLE"
-
-    # Print a new line before the prompt, but only if it is not the first line
-    if [ "$NEWLINE_BEFORE_PROMPT" = yes ]; then
-        if [ -z "$_NEW_LINE_BEFORE_PROMPT" ]; then
-            _NEW_LINE_BEFORE_PROMPT=1
-        else
-            print ""
-        fi
-    fi
-}
 
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
@@ -168,7 +146,19 @@ if [ -f /etc/zsh_command_not_found ]; then
 fi
 
 ################################## Functions section ###########################################
+precmd() {
+    # Print the previously configured title
+    print -Pnr -- "$TERM_TITLE"
 
+    # Print a new line before the prompt, but only if it is not the first line
+    if [ "$NEWLINE_BEFORE_PROMPT" = yes ]; then
+        if [ -z "$_NEW_LINE_BEFORE_PROMPT" ]; then
+            _NEW_LINE_BEFORE_PROMPT=1
+        else
+            print ""
+        fi
+    fi
+}
 
 # generate new SSH keys for github, run this u'll get the pub key copied to ur clipboard,just paste it
 ghkey() {
