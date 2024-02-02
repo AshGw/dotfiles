@@ -1,7 +1,10 @@
 #!/bin/bash
 
 REPO=https://raw.githubusercontent.com/AshGw/dotfiles/main
-
+GREEN="\e[1;32m"
+RED="\e[31m"
+CYAN="\e[36m"
+ENDCOLOR="\e[0m"
 
 # zsh needs to be installed natively, or else it brings trouble in some environments as 
 # $HOM/.nix-profile/bin/zsh is not recognized as a valid shell
@@ -11,7 +14,7 @@ if ! command -v zsh &> /dev/null; then
     sudo apt update
     sudo apt -y install zsh
   else
-    echo "Zsh not found, and you are not on Debian. Install it with your package manager to continue. Exiting."
+    echo -e "${RED}Zsh not found, and you are not on Debian. Install it with your package manager to continue. Exiting. ${ENDCOLOR}"
     exit 1
   fi
 fi
@@ -25,17 +28,16 @@ if ! command -v xz &> /dev/null; then
     echo "Also installing build essentials..:"
     sudo apt  -y install build-essential
   else
-    echo "xz not found, and you are not on Debian, install it with your package manager to continue. Exiting."
+    echo -e "${RED}xz not found, and you are not on Debian, install it with your package manager to continue. Exiting. ${ENDCOLOR}"
     exit 1
   fi
 fi
-
-echo -e "\e[1;32mInstalling nix..\e[0m"
+echo -e "${GREEN}Installing nix.. ${ENDCOLOR}"
 
 sh <(curl -L https://nixos.org/nix/install) --no-daemon
 . ~/.nix-profile/etc/profile.d/nix.sh
 
-echo -e "\e[1;32mInstalling all the necessary packages..\e[0m"
+echo -e "${GREEN}Installing all the necessary packages.. ${ENDCOLOR}"
 
 # chad packages installation
 nix-env -iA nixpkgs.git \
@@ -69,9 +71,10 @@ nix-env -iA nixpkgs.git \
     nixpkgs.tor \
     nixpkgs.tor-browser
 
-echo -e "\e[1;32mThe whole 9 setup..\e[0m"
-#
+echo -e "${CYAN}The whole 9 setup.. ${ENDCOLOR}"
+
 mkdir work trash personal 
+
 # tmux plugin manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
@@ -88,9 +91,7 @@ rm -rf ~/.zshrc
 mkdir ~/.config ~/.ssh ~/.config/nvim ~/.config/zathura ~/.config/neofetch ~/.config/picom ~/.config/polybar ~/.config/i3 
 
 # dotfiles mapping
-
-echo -e "\e[1;32mCopying the files into $HOME..\e[0m"
-
+echo -e "${CYAN}Copying the files into $HOME..${ENDCOLOR}"
 
 declare -A dotfiles=(
   [".zshrc"]="$REPO/.zshrc"
@@ -139,29 +140,28 @@ if [ "$ans" == "y" ]; then
     
     echo -e "\e[1;32mInstalling conda...\e[0m"
     bash <(curl -L $REPO/install/arbitrary/conda)
-    echo -e "\e[1;32mconda installation done!\e[0m"
+    echo -e "${GREEN}Conda installation: Done!.${ENDCOLOR}"
 
     echo -e "\e[1;32mInstalling node...\e[0m"
     bash <(curl -L $REPO/install/arbitrary/node)
-    echo -e "\e[1;32mnode installation done!\e[0m"
+    echo -e "${GREEN}Node installation done!.${ENDCOLOR}"
 
     echo -e "\e[1;32mInstalling pnpm...\e[0m"
     bash <(curl -L $REPO/install/arbitrary/pnpm)
-    echo -e "\e[1;32mpnpm installation done!\e[0m"
+    echo -e "${GREEN}Pnpm installation done!.${ENDCOLOR}"
 
     echo -e "\e[1;32mInstalling poetry...\e[0m"
     bash <(curl -L $REPO/install/arbitrary/poetry)
-    echo -e "\e[1;32mpoetry installation done!\e[0m"
+    echo -e "${GREEN}Poetry installation done!${ENDCOLOR}"
 
     echo -e "\e[1;32mInstalling go...\e[0m"
     bash <(curl -L $REPO/install/arbitrary/go)
-    echo -e "\e[1;32mgo installation done!\e[0m"
+    echo -e "${GREEN}Go installation done!${ENDCOLOR}"
 
     echo -e "\e[1;32mInstalling rust...\e[0m"
     bash <(curl -L $REPO/install/arbitrary/rust)
-    echo -e "\e[1;32mrust installation done!\e[0m"
-
-    echo -e "\e[1;32mInstallation of arbitrary dev packages completed.\e[0m"
+    echo -e "${GREEN}Rust installation done!${ENDCOLOR}"
+    echo -e "${CYAN}Installation of arbitrary packages is completed.${ENDCOLOR}"
 else
     echo "Skipping installation of arbitrary dev packages."
 fi
@@ -171,30 +171,26 @@ fi
 read -p $"Do you by any chance want to install some proprietary software? (y/n)\nThe list currently contains: Obsidian: " ans
 
 if [ "$ans" == "y" ]; then
-    echo -e "\e[1;32mInstalling Obsidian...\e[0m"
+    echo -e "${GREEN}Installing Obsidian${ENDCOLOR}"
     bash <(curl -L $REPO/install/proprietary/obsidian)
-    echo -e "\e[1;32mObsidian installation is complete!\e[0m"
+    echo -e "${GREEN}Obsidian is installed!${ENDCOLOR}"
 else
     echo "Skipping the proprietary software installation."
 fi
 
-
-echo "Want to to set up GitHub SSH keys now?"
-echo "(U will only need them to authenticate for the `post-bootstrap` step)"
-read -p $"What u say ?(y/n): " ans
+read -p $"Want to to set up GitHub SSH keys now? (y/n): " ans
 
 if [ "$ans" == "y" ]; then
     bash <(curl -L $REPO/.ssh/_gh_gen.sh)
-    echo -e "\e[1;32mDone! The public key has been copied to your clipboard. Go paste it now on GitHub.\e[0m"
+    echo -e "${GREEN}Done! The public key has been copied to your clipboard${ENDCOLOR}"
   
-
 else
     echo "Aight, maybe later. You can run `ghkey` whenever youre ready to set it up."
 fi
 
 
-echo -e "\e[1;32mBootstrapping is complete!\e[0m"
-echo -e "\e[1;36mYou might restart your shell for changes to take place\e[0m"
+echo -e "${GREEN}Bootstrapped!${ENDCOLOR}"
+echo -e "${CYAN}You might restart your shell for changes to take place${ENDCOLOR}"
 
 
 
