@@ -34,4 +34,5 @@
     review = log -p --max-count=1
     lsr = ls-remote
     cl = clone
-
+    ck = checkout 
+    s = switch 
