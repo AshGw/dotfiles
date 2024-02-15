@@ -173,6 +173,12 @@ tercon() {
 	done
 }
 
+# remove all volumes 
+tervol() {
+   docker volume rm $(docker volume ls -q)
+}
+
+
 # shows pretty `man` page.
 man () {
   env \
