@@ -178,6 +178,12 @@ tervol() {
    docker volume rm $(docker volume ls -q)
 }
 
+# remove all images 
+terimg() {
+   for img in $(docker images -q); do
+        docker rmi "${img}" || :
+    done
+}
 
 # shows pretty `man` page.
 man () {
