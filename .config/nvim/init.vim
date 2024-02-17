@@ -35,10 +35,12 @@ set nocompatible
 nnoremap c "_c
 filetype plugin on
 syntax on
-
-"All the plugins"
+"All the plugins
 
 call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
+" Theme
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+" helpers
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
 Plug 'junegunn/goyo.vim'
@@ -46,7 +48,6 @@ Plug 'jreybert/vimagit'
 Plug 'vimwiki/vimwiki'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-commentary'
-
 
 " JS ecosystem setup
 
@@ -214,7 +215,10 @@ endfunction
 
 
 nnoremap <leader>h :call ToggleHiddenAll()<CR>
+" default theme for now
+
+colorscheme catppuccin-mocha
 
 
-" aliases 
+" aliases
 command! -nargs=* B Explore .. <args>
