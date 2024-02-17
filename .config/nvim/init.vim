@@ -214,3 +214,7 @@ endfunction
 
 
 nnoremap <leader>h :call ToggleHiddenAll()<CR>
+
+
+" aliases 
+command! -nargs=* B Explore .. <args>
