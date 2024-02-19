@@ -1,7 +1,7 @@
 [user]
     email = AshrefGw@proton.me
     name = AshGw
-    signingkey =  1CDA8CFFDFBA9148AC26A01F6BAF3BC4429860D3
+    signingkey =  79821E0224D34EC4969FF6A8E5168EE090AE80D0
 [gpg]
     program = gpg
 
@@ -34,5 +34,5 @@
     review = log -p --max-count=1
     lsr = ls-remote
     cl = clone
-    ck = checkout 
-    s = switch 
+    ck = checkout
+    s = switch

@@ -4,7 +4,7 @@ KEY_DIR=~/.keys
 AES_KEY_FILE=$KEY_DIR/.key
 GIT_CONFIG_FILE=~/.gitconfig
 GPG_PRIVATE_KEY_FILE=$KEY_DIR/gpg_prv.asc
-GPG_PRIVATE_KEY_ID=1CDA8CFFDFBA9148AC26A01F6BAF3BC4429860D3
+GPG_PRIVATE_KEY_ID=79821E0224D34EC4969FF6A8E5168EE090AE80D0
 
 [ "$1" = "-p" ] && PYTHON=$2 || PYTHON="python3"
 
@@ -31,7 +31,7 @@ fi
 echo "Decrypting the GPG key. The process might take some time; don't alter the target file."
 cd  $KEY_DIR
 $PYTHON -m  dec
-cd 
+cd
 curl -o "$GIT_CONFIG_FILE" https://raw.githubusercontent.com/AshGw/dotfiles/main/other/.gitconfig/.gitconfig-gpg
 export GPG_TTY=$(tty)
 echo "export GPG_TTY=$(tty)" >> ~/.zshrc
