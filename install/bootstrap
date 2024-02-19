@@ -56,6 +56,7 @@ nix-env -iA nixpkgs.git \
     nixpkgs.polybar \
     nixpkgs.feh \
     nixpkgs.man \
+    nixpkgs.bruno \
     nixpkgs.i3 \
     nixpkgs.picom \
     nixpkgs.pango \
