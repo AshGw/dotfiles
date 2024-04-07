@@ -6,7 +6,7 @@ RED="\e[31m"
 CYAN="\e[36m"
 ENDCOLOR="\e[0m"
 
-# zsh needs to be installed natively, or else it brings trouble in some environments as 
+# zsh needs to be installed natively, or else it brings trouble in some environments as
 # $HOM/.nix-profile/bin/zsh is not recognized as a valid shell
 if ! command -v zsh &> /dev/null; then
   if [ -f "/etc/debian_version" ]; then
@@ -67,6 +67,7 @@ nix-env -iA nixpkgs.git \
     nixpkgs.virtualbox \
     nixpkgs.wireshark \
     nixpkgs.nmap \
+    nixpkgs.fzf \
     nixpkgs.pandoc \
     nixpkgs.zathura \
     nixpkgs.tor \
@@ -74,7 +75,7 @@ nix-env -iA nixpkgs.git \
 
 echo -e "${CYAN}The whole 9 setup.. ${ENDCOLOR}"
 
-mkdir work trash personal 
+mkdir work trash personal
 
 # tmux plugin manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -89,7 +90,7 @@ curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolor
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" <<< $'\n'
 rm -rf ~/.zshrc
 
-mkdir ~/.config ~/.ssh ~/.config/nvim ~/.config/zathura ~/.config/neofetch ~/.config/picom ~/.config/polybar ~/.config/i3 
+mkdir ~/.config ~/.ssh ~/.config/nvim ~/.config/zathura ~/.config/neofetch ~/.config/picom ~/.config/polybar ~/.config/i3
 
 # dotfiles mapping
 echo -e "${CYAN}Copying the files into $HOME..${ENDCOLOR}"
@@ -133,12 +134,12 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git $HOME/.oh-my-zsh/
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 ##############################################
-#### now for the extra shit 
+#### now for the extra shit
 
 read -p "Do you want to install all the arbitrary dev packages? (y/n): " ans
 
 if [ "$ans" == "y" ]; then
-    
+
     echo -e "\e[1;32mInstalling conda...\e[0m"
     bash <(curl -L $REPO/install/arbitrary/conda)
     echo -e "${GREEN}Conda installation: Done!.${ENDCOLOR}"
@@ -184,7 +185,7 @@ read -p $"Want to to set up GitHub SSH keys now? (y/n): " ans
 if [ "$ans" == "y" ]; then
     bash <(curl -L $REPO/.ssh/_gh_gen.sh)
     echo -e "${GREEN}Done! The public key has been copied to your clipboard${ENDCOLOR}"
-  
+
 else
     echo "Aight, maybe later. You can run `ghkey` whenever youre ready to set it up."
 fi
@@ -192,11 +193,3 @@ fi
 
 echo -e "${GREEN}Bootstrapped!${ENDCOLOR}"
 echo -e "${CYAN}You might restart your shell for changes to take place${ENDCOLOR}"
-
-
-
-
-
-
-
-
