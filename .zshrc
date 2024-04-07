@@ -53,6 +53,7 @@ alias \
 	p="python3 -m" \
 	reload=". ~/.zshrc" \
 	y="rm -rf"\
+	f="nvim $(fzf --height 50%)" \
 	b="cd .."  \
 	bb="cd ..."   \
 	bbb="cd ...."   \
@@ -68,7 +69,7 @@ alias \
 	d-startall="docker start $(docker ps -a -q)" \
 	d-rmall="docker rm $(docker ps -a -q)" \
 	pubip='dig +short myip.opendns.com @resolver1.opendns.com' \
-  	localip='ipconfig getifaddr en1' \ 
+  	localip='ipconfig getifaddr en1' \
 	ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'" \
 	ports='lsof +c0 -iTCP -sTCP:LISTEN -n -P'
 
@@ -174,12 +175,12 @@ tercon() {
 	done
 }
 
-# remove all volumes 
+# remove all volumes
 tervol() {
    docker volume rm $(docker volume ls -q)
 }
 
-# remove all images 
+# remove all images
 terimg() {
    for img in $(docker images -q); do
         docker rmi "${img}" || :
@@ -223,7 +224,7 @@ passdec() {
     echo -e "\e[1;32mDecrypted $input_file and saved as: $output_file\e[0m"
 }
 
-# copies the content of a file to the clipboard 
+# copies the content of a file to the clipboard
 cpf() {
     if [[ -n $1 && -f $1 ]]; then
         xclip -selection clipboard < $1
@@ -238,6 +239,3 @@ loadpg() {
    pkill -9 gpg-agent
    export GPG_TTY=$(tty)
 }
-
-
-
