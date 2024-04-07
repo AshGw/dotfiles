@@ -53,7 +53,7 @@ alias \
 	p="python3 -m" \
 	reload=". ~/.zshrc" \
 	y="rm -rf"\
-	f="nvim $(fzf --height 50%)" \
+	f="fzf" \
 	b="cd .."  \
 	bb="cd ..."   \
 	bbb="cd ...."   \
