@@ -239,3 +239,16 @@ loadpg() {
    pkill -9 gpg-agent
    export GPG_TTY=$(tty)
 }
+
+# I like it sunny
+weather() {
+    LOCATION=city
+
+    printf "%s" "$SEP1"
+    if [ "$IDENTIFIER" = "unicode" ]; then
+        printf "%s" "$(curl -s wttr.in/$LOCATION?format=1)"
+    else
+        printf "WEA %s" "$(curl -s wttr.in/$LOCATION?format=1 | grep -o "[0-9].*")"
+    fi
+    printf "%s\n" "$SEP2"
+}
