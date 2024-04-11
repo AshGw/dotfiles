@@ -54,6 +54,7 @@ alias \
 	reload=". ~/.zshrc" \
 	y="rm -rf"\
 	f="fzf" \
+	tf="terraform" \
 	b="cd .."  \
 	bb="cd ..."   \
 	bbb="cd ...."   \
