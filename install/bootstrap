@@ -160,10 +160,18 @@ if [ "$ans" == "y" ]; then
     bash <(curl -L $REPO/install/arbitrary/go)
     echo -e "${GREEN}Go installation done!${ENDCOLOR}"
 
+    echo -e "\e[1;32mInstalling terraform...\e[0m"
+    bash <(curl -L $REPO/install/arbitrary/terraform)
+    echo -e "${GREEN}terraform installation done!${ENDCOLOR}"
+
+
+
     echo -e "\e[1;32mInstalling rust...\e[0m"
     bash <(curl -L $REPO/install/arbitrary/rust)
     echo -e "${GREEN}Rust installation done!${ENDCOLOR}"
     echo -e "${CYAN}Installation of arbitrary packages is completed.${ENDCOLOR}"
+
+
 else
     echo "Skipping installation of arbitrary dev packages."
 fi
