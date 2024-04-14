@@ -35,4 +35,4 @@
     lsr = ls-remote
     cl = clone
     ck = checkout
-    s = switch
+    s = status
