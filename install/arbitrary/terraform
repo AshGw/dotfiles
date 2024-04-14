@@ -11,3 +11,8 @@ sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null && gpg --
 
 a update
 i terraform
+
+# terraform version manager
+git clone --depth=1 https://github.com/tfutils/tfenv.git ~/.tfenv
+echo 'export PATH="$HOME/.tfenv/bin:$PATH"' >> ~/.zshrc
+reload
