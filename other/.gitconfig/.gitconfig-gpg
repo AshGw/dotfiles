@@ -15,6 +15,7 @@
     editor = nvim
 
 [alias]
+    b='git branch'
     a = add .
     p  = push origin
     pu  = pull origin
@@ -36,3 +37,4 @@
     cl = clone
     ck = checkout
     s = status
+    fa='add $(git ls-files --modified | fzf -m --preview "git diff --color -- {1}")'
