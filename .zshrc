@@ -64,6 +64,7 @@ alias \
     sudo='sudo ' \
     j="just"\
 	x="chmod +x" \
+	ez="eza --long --header --inode --git" \
 	d="docker" \
 	d-stopall="docker stop $(docker ps -a -q)" \
 	d-restratall="docker restart $(docker ps -a -q)" \
