@@ -65,6 +65,8 @@ alias \
     j="just"\
 	x="chmod +x" \
 	ez="eza --long --header --inode --git" \
+	se="librewolf https://duckduckgo.com"
+	github="librewolf https://github.com/ashgw" \
 	d="docker" \
 	d-stopall="docker stop $(docker ps -a -q)" \
 	d-restratall="docker restart $(docker ps -a -q)" \
@@ -187,6 +189,15 @@ terimg() {
    for img in $(docker images -q); do
         docker rmi "${img}" || :
     done
+}
+
+
+dprune() {
+	 tercon && terimg && tervol
+   docker container prune -f
+   docker system prune -f
+   docker image prune -f
+   docker volume prune -f
 }
 
 # shows pretty `man` page.
