@@ -247,6 +247,15 @@ cpf() {
     fi
 }
 
+
+# short for copy command, copies the output of the command to the clipboard
+ccmd() {
+    "$@" | xclip -selection clipboard
+}
+
+
+
+
 # gpg dameon  starts acting up, reload it
 loadpg() {
    pkill -9 gpg-agent
