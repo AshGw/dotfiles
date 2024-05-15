@@ -68,10 +68,10 @@ alias \
 	ddgo="librewolf https://duckduckgo.com"
 	gh="librewolf https://github.com/ashgw" \
 	d="docker" \
-	d-stopall="docker stop $(docker ps -a -q)" \
-	d-restratall="docker restart $(docker ps -a -q)" \
-	d-startall="docker start $(docker ps -a -q)" \
-	d-rmall="docker rm $(docker ps -a -q)" \
+	d_stopall="docker stop $(docker ps -a -q)" \
+	d_restratall="docker restart $(docker ps -a -q)" \
+	d_startall="docker start $(docker ps -a -q)" \
+	d_rmall="docker rm $(docker ps -a -q)" \
 	pubip='dig +short myip.opendns.com @resolver1.opendns.com' \
   	localip='ipconfig getifaddr en1' \
 	ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'" \
