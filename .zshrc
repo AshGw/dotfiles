@@ -60,12 +60,12 @@ alias \
 	bbb="cd ...."   \
 	bbbb="cd ....."  \
 	bbbbb="cd ......" \
-    bat="\bat --theme=GitHub" \
-    sudo='sudo ' \
-    j="just"\
+  bat="\bat --theme=GitHub" \
+  sudo='sudo ' \
+  j="just"\
 	x="chmod +x" \
 	ez="eza --long --header --inode --git" \
-	ddgo="librewolf https://duckduckgo.com"
+	ddgo="librewolf https://duckduckgo.com" \
 	gh="librewolf https://github.com/ashgw" \
 	d="docker" \
 	d_stopall="docker stop $(docker ps -a -q)" \
