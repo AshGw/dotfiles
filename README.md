@@ -23,6 +23,7 @@ dprune && lpg && g ck -b dev && j t && j l && v . && c && gh
  It may not make sense to you, but it makes sense to me.
 
  2- Ricing? What's that ?
+ 
  3- Neovim, tmux & fzf? Yes
 
 ![ricer](https://github.com/AshGw/Doctouuuuur/assets/126174609/b1329bf1-ad7a-4859-8b7e-3ede690a7116)
