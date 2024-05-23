@@ -16,13 +16,13 @@ I'm currently on the slope of enlightenment.
 
 Developer workflow:
 
-1-   I use a shit ton of aliases, even aliasing the aliases, ion like mental overhead, if it takes more than 3 words to type it => alias it. So if casually type random shit like
+1-   I use a shit ton of aliases, even aliasing the aliases, ion like mental overhead, if it takes more than 3 words to type it => alias it. So if I casually type random shit like
 ```shell
 dprune && lpg && g ck -b dev && j t && j l && v . && c && gh
 ```
  It may not make sense to you, but it makes sense to me.
 
- 2- 0 rice
- 3- neovim, tmux & fzf? Yes
+ 2- Ricing? What's that ?
+ 3- Neovim, tmux & fzf? Yes
 
 ![ricer](https://github.com/AshGw/Doctouuuuur/assets/126174609/b1329bf1-ad7a-4859-8b7e-3ede690a7116)
