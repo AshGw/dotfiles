@@ -71,6 +71,7 @@ nix-env -iA nixpkgs.git \
     nixpkgs.fzf \
     nixpkgs.pandoc \
     nixpkgs.zathura \
+    nixpkgs.starship \
     nixpkgs.tor \
     nixpkgs.tor-browser
 
@@ -84,6 +85,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # dircolors
 curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark --output ~/.dircolors
+
 
 
 # zsh setup
@@ -104,6 +106,7 @@ declare -A dotfiles=(
   [".tmux.conf"]="$REPO/.tmux.conf"
   [".gitconfig"]="$REPO/.gitconfig"
   [".hushlogin"]="$REPO/.hushlogin"
+  [".config/starship.toml"]="$REPO/.config/starship.toml"
   [".config/nvim/init.vim"]="$REPO/.config/nvim/init.vim"
   [".config/zathura/zathurarc"]="$REPO/.config/zathura/zathurarc"
   [".config/i3/config"]="$REPO/.config/i3/config"
@@ -133,6 +136,11 @@ EOF
       ### zsh plugins ###
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+# starship
+echo 'eval "$(starship init zsh)"' >> ~/.zshrc
+starship preset nerd-font-symbols -o ~/.config/starship.toml
+
 
 ##############################################
 #### now for the extra shit
