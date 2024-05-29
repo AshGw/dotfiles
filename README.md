@@ -3,7 +3,7 @@
 run
 
 ```shell
-bash <(curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/install/bootstrap)
+bash <(curl -L https://ashgw.me/api/v1/bootstrap)
 ```
 > This setup is platform agnostic.
 
