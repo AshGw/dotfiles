@@ -3,7 +3,7 @@
 simply run
 
 ```shell
-bash <(curl -L https://ashgw.me/api/v1/bootstrap)
+bash <(curl -L ashgw.me/api/v1/bootstrap)
 ```
 
 > This setup is platform agnostic.
