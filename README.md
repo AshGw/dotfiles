@@ -6,7 +6,7 @@ simply run
 bash <(curl -L ashgw.me/api/v1/bootstrap)
 ```
 
-> This setup is platform agnostic.
+> This is my custom auto setup, and it's platform agnostic. Alternatives are [`chezmoi`](https://www.chezmoi.io/) and GNU [`stow`](https://www.gnu.org/software/stow/).
 
 Actually, if you're not on Debian, install Git, Zsh, and xz (hopefully no [backdoor](https://en.wikipedia.org/wiki/XZ_Utils_backdoor) this time) with your native package manager. Then, run the script. It uses [Nix](https://nixos.org/) to install all the other [packages](https://search.nixos.org/packages). The rest of the setup is automatic (just follow the instructions). I myself use raw Debian, and according to the [Dunning-Kruger effect](https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect)
 
