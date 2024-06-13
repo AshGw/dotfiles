@@ -16,7 +16,7 @@ I'm currently on the slope of enlightenment.
 
 #### Workflow
 
-1- Shit ton of aliases, even aliasing the aliases, ion like mental overhead, if it takes more than 3 words to type, it has to be aliased. So this is the typa shit I be on
+1- A ton of aliases, even aliasing the aliases, I don't like mental overhead, if it takes more than 3 words to type, it has to be aliased. So this what I usually type, it might not make sense to you, but it makes a lot of sense to me
 
 ```shell
 dprune && lpg && g ck -b dev && j t && j l && v . && c && gh
