@@ -38,3 +38,6 @@
     ck = checkout
     s = status
     fa='add $(git ls-files --modified | fzf -m --preview "git diff --color -- {1}")'
+
+[push]
+	default = current
