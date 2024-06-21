@@ -42,7 +42,7 @@ echo -e "${GREEN}Installing all the necessary packages.. ${ENDCOLOR}"
 # chad packages installation
 nix-env -iA nixpkgs.git \
     nixpkgs.curl \
-    nixpkg.eza \
+    nixpkgs.eza \
     nixpkgs.wget \
     nixpkgs.neovim \
     nixpkgs.tmux \
