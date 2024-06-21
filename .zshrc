@@ -1,3 +1,43 @@
+# Boilerplate
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export ZSH="$HOME/.oh-my-zsh"
+
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+ZSH_THEME="robbyrussell"
+HIST_STAMPS="dd/mm/yyyy"
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+source $ZSH/oh-my-zsh.sh
+export LANG=en_US.UTF-8
+
+# editors for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='nvim'
+ else
+   export EDITOR='code'
+fi
+
+# Disable GPG GUI prompts inside SSH.
+if [[ -n "$SSH_CONNECTION" ]]; then
+  export PINENTRY_USER_DATA='USE_CURSES=1'
+fi
+
+autoload -U colors && colors	# Load colors
+
+# Basic auto/tab complete
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)		# Include hidden files.
+
+# Some shortcuts
+
 
 alias \
 	c="clear" \
