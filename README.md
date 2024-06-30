@@ -26,4 +26,4 @@ dprune && lpg && g ck -b dev && j t && j l && v . && c && gh
 
 3- Neovim, tmux & fzf? Yes
 
-![ricer](https://github.com/AshGw/dotfiles/assets/126174609/ef784081-62a9-4c3e-9724-4746deba2202)
+![ricer](https://github-production-user-asset-6210df.s3.amazonaws.com/126174609/344492906-a2f688f4-d472-4abb-9e49-f64fd0d8ee77.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240630%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240630T203213Z&X-Amz-Expires=300&X-Amz-Signature=b434f0639a9845be7ab05470545ede119d26e00ab47706c8761c83fc90dd3674&X-Amz-SignedHeaders=host&actor_id=126174609&key_id=0&repo_id=723693556)
