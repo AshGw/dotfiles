@@ -1,10 +1,14 @@
 ### just setup
-cargo install just 
+cargo install just
 ### GPG setup
+
+### Zioxide
+cargo install zoxide --locked
+###
 TEMP_FILE=gpg-setup978523815487958645.sh
 curl -L https://raw.githubusercontent.com/AshGw/dotfiles/main/other/crypt/gpg-setup -o /tmp/$TEMP_FILE
 bash /tmp/$TEMP_FILE
 rm /tmp/$TEMP_FILE
 ### encrypted personal files import
 git clone git@github.com:AshGw/personal.git ~/personal
-### 
+###
