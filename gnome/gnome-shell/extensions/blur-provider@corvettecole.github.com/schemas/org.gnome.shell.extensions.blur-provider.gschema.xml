@@ -1,0 +1,13 @@
+<schemalist gettext-domain="gnome-shell-extensions">
+  <schema id="org.gnome.shell.extensions.blur-provider" path="/org/gnome/shell/extensions/blur-provider/">
+
+
+    <key name="blur-intensity" type="i">
+      <default>100</default>
+      <summary>Blur Intensity</summary>
+      <description>This will decide the intensity of the blur effect. Higher values are more performant</description>
+    </key>
+   
+
+  </schema>
+</schemalist>

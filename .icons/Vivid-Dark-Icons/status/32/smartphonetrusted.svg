@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="0 0 32 32"
+   id="svg1"
+   sodipodi:docname="smartphonetrusted.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="23.875"
+     inkscape:cx="16"
+     inkscape:cy="16"
+     inkscape:window-width="1920"
+     inkscape:window-height="996"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <style
+     id="current-color-scheme"
+     type="text/css">.ColorScheme-Highlight{color:#3daee9;}.ColorScheme-Text { color: #232629; } </style>
+  <path
+     id="smartphone"
+     class="ColorScheme-Text"
+     d="m11 3c-1.108 0-2 0.892-2 2v22c0 1.108 0.892 2 2 2h10c1.108 0 2-0.892 2-2v-22c0-1.108-0.892-2-2-2h-10zm0 1h10c0.554 0 1 0.446 1 1v22c0 0.554-0.446 1-1 1h-10c-0.554 0-1-0.446-1-1v-22c0-0.554 0.446-1 1-1zm0.5 1a0.5 0.5 0 0 0-0.5 0.5 0.5 0.5 0 0 0 0.5 0.5 0.5 0.5 0 0 0 0.5-0.5 0.5 0.5 0 0 0-0.5-0.5zm2 21c-0.277 0-0.5 0.223-0.5 0.5s0.223 0.5 0.5 0.5h5c0.277 0 0.5-0.223 0.5-0.5s-0.223-0.5-0.5-0.5h-5z"
+     fill="currentColor"
+     style="fill:#00ccff" />
+  <path
+     id="shield"
+     class="ColorScheme-Highlight"
+     d="m16 11.992-0.39258 0.49805s-0.13509 0.18595-0.62109 0.46289c-0.486 0.27694-1.2899 0.60234-2.5391 0.73438l-0.44727 0.046875v0.45117s0.017434 4.2323 3.8145 5.7422l0.18555 0.074219 0.18555-0.074219c3.7971-1.5091 3.8145-5.7422 3.8145-5.7422v-0.45117l-0.44727-0.046875c-1.2492-0.13243-2.053-0.4575-2.5391-0.73438-0.48603-0.27688-0.62109-0.46289-0.62109-0.46289l-0.39258-0.49805zm0 1.4238c0.14869 0.13887 0.17172 0.20923 0.51758 0.40625 0.50031 0.28501 1.4022 0.52865 2.4121 0.70703-0.019947 0.51852-0.23392 3.1149-2.9297 4.3398-2.696-1.2256-2.9097-3.8214-2.9297-4.3398 1.01-0.17815 1.9117-0.42191 2.4121-0.70703 0.34589-0.1971 0.36887-0.26729 0.51758-0.40625z"
+     fill="currentColor" />
+</svg>

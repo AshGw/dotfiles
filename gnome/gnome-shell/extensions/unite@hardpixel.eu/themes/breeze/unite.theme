@@ -1,0 +1,8 @@
+[Theme]
+Name=Breeze
+
+[Dark]
+Style=stylesheet.css
+
+[Light]
+Style=stylesheet.css

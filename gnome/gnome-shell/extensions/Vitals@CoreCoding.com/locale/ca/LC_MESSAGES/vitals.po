@@ -1,0 +1,274 @@
+# Catalan translation for gnome-shell-extension-vitals.
+#
+# This file is distributed under the same license as the
+# gnome-shell-extension-vitals package.
+#
+# Federico Trillo <aguasmenores@protonmail.com>, 2019
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2018-12-29 12:05+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Federico Trillo\n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: extension.js:113
+msgid "Preferences"
+msgstr "Preferències"
+
+#: extension.js:120
+msgid "System Monitor"
+msgstr "Monitor de sistema"
+
+#: extension.js:127
+msgid "Refresh"
+msgstr "Actualitza"
+
+#: schemas/prefs.ui:40
+msgid "Include public IP address"
+msgstr "Incloure la direcció IP pública"
+
+#: schemas/prefs.ui:81
+msgid "Format"
+msgstr "Format"
+
+#: schemas/prefs.ui:95
+msgid "Bytes"
+msgstr "Bytes"
+
+#: schemas/prefs.ui:96
+msgid "Bits"
+msgstr "Bits"
+
+#: schemas/prefs.ui:154
+msgid "General"
+msgstr "General"
+
+#: schemas/prefs.ui:194
+msgid "Seconds between updates"
+msgstr "Segons entre actualitzacions"
+
+#: schemas/prefs.ui:244
+msgid "Position in panel"
+msgstr "Posició al panel"
+
+#: schemas/prefs.ui:259
+msgid "Left"
+msgstr "Esquerra"
+
+#: schemas/prefs.ui:260
+msgid "Center"
+msgstr "Centre"
+
+#: schemas/prefs.ui:261
+msgid "Right"
+msgstr "Dreta"
+
+#: schemas/prefs.ui:293
+msgid "Use higher precision"
+msgstr "Utilitzar una major precisió"
+
+#: schemas/prefs.ui:335
+msgid "Alphabetize sensors"
+msgstr "Ordenar sensors alfabèticament"
+
+#: schemas/prefs.ui:377
+msgid "Hide zero values"
+msgstr "Amaga els valors zero"
+
+#: schemas/prefs.ui:419
+msgid "About"
+msgstr "Quant a"
+
+#: schemas/prefs.ui:444
+msgid "Feature requests or bugs? Please visit <a href=\""
+"https://github.com/corecoding/Vitals/issues\">GitHub</a>. "
+"No warranty, expressed or implied. <a href=\"https://"
+"corecoding.com/donate.php\">Donate</a> if you found this useful."
+msgstr ""
+"T'agrada el que veus? Dóna suport al desenvolupament d'aquesta extensió "
+"mitjançant <a href=\"https://corecoding.com/donate.php\">PayPal</a>.\n"
+"\n"
+"Sense garantia, expressa o implícita. Peticions de característiques o "
+"errors? Per favor visiti el nostre projecte a <a href=\"https://github.com/"
+"corecoding/Vitals\">GitHub</a>."
+
+#: schemas/prefs.ui:485
+msgid "Sensors"
+msgstr "Sensors"
+
+#: schemas/prefs.ui:529
+msgid "Monitor temperature"
+msgstr "Monitor de temperatura"
+
+#: schemas/prefs.ui:610
+msgid "Monitor voltage"
+msgstr "Monitor de voltatge"
+
+#: schemas/prefs.ui:653
+msgid "Monitor fan"
+msgstr "Monitor de ventilador"
+
+#: schemas/prefs.ui:696
+msgid "Monitor memory"
+msgstr "Monitor de memòria"
+
+#: schemas/prefs.ui:739
+msgid "Monitor processor"
+msgstr "Monitor de processador"
+
+#: schemas/prefs.ui:782
+msgid "Monitor system"
+msgstr "Monitor de sistema"
+
+#: schemas/prefs.ui:825
+msgid "Monitor network"
+msgstr "Monitor de xarxa"
+
+#: schemas/prefs.ui:906
+msgid "Monitor storage"
+msgstr "Monitor d'emmagatzematge"
+
+#: schemas/prefs.ui:1031
+msgid "Path"
+msgstr "Ruta"
+
+#: schemas/prefs.ui:1104
+msgid "Unit"
+msgstr "Unitat"
+
+#: sensors.js:120
+msgid "Usage"
+msgstr "Ús"
+
+#: sensors.js:121
+msgid "Memory"
+msgstr "Memòria"
+
+#: sensors.js:122
+msgid "Physical"
+msgstr "Física"
+
+#: sensors.js:123
+msgid "Available"
+msgstr "Disponible"
+
+#: sensors.js:124
+msgid "Allocated"
+msgstr "Assignada"
+
+#: sensors.js:125
+msgid "Swap Used"
+msgstr "Intercanvi utilitzada"
+
+#: sensors.js:165 values.js:183
+msgid "Average"
+msgstr "Mitjana"
+
+#: sensors.js:166
+msgid "Processor"
+msgstr "Processador"
+
+#: sensors.js:168
+#, javascript-format
+msgid "Core %d"
+msgstr "Nucli %d"
+
+#: sensors.js:207
+msgid "Frequency"
+msgstr "Freqüència mitjana"
+
+#: sensors.js:208
+msgid "Boost"
+msgstr "Turbo"
+
+#: sensors.js:203
+msgid "Load 1m"
+msgstr "Càrrega (1m)"
+
+#: sensors.js:204
+msgid "System"
+msgstr "Sistema"
+
+#: sensors.js:205
+msgid "Load 5m"
+msgstr "Càrrega (5m)"
+
+#: sensors.js:206
+msgid "Load 15m"
+msgstr "Càrrega (15m)"
+
+#: sensors.js:207
+msgid "Threads Active"
+msgstr "Fils actius"
+
+#: sensors.js:208
+msgid "Threads Total"
+msgstr "Total de fils"
+
+#: sensors.js:216
+msgid "Uptime"
+msgstr ""
+
+#: sensors.js:220
+msgid "Process Time"
+msgstr "Temps actiu mitjà"
+
+#: sensors.js:277
+msgid "Public IP"
+msgstr "IP pública"
+
+#: sensors.js:298
+msgid "Total"
+msgstr "Total"
+
+#: sensors.js:299
+msgid "Used"
+msgstr "Usat"
+
+#: sensors.js:300
+msgid "Reserved"
+msgstr "Reservat"
+
+#: sensors.js:301
+msgid "Free"
+msgstr "Lliure"
+
+#: sensors.js:302
+msgid "Storage"
+msgstr "Emmagatzematge"
+
+#: values.js:189
+msgid "Maximum "
+msgstr "Màxim "
+
+msgid "Temperature"
+msgstr "Temperatura"
+
+msgid "Voltage"
+msgstr "Voltatge"
+
+msgid "Fan"
+msgstr "Ventilador"
+
+msgid "Network"
+msgstr "Xarxa"
+
+msgid "Temperature Preferences"
+msgstr "Preferències de temperatura"
+
+msgid "Network Preferences"
+msgstr "Preferèncias de xarxa"
+
+msgid "Storage Preferences"
+msgstr "Preferèncias d'emmagatzematge"
+
+#~ msgid "Maximum tx"
+#~ msgstr "Màxim tx"

@@ -1,0 +1,27 @@
+#panel .panel-button.window-controls {
+  -natural-hpadding: 0px;
+  -minimum-hpadding: 0px;
+}
+
+#panel .window-controls-box {
+  spacing: 2px;
+}
+
+#panel .window-controls-box .window-button {
+  width: 22px;
+}
+
+#panelLeft .window-controls-container:first-child .window-button:first-child {
+  padding-left: 3px;
+}
+
+#panelRight .window-controls-container:last-child .window-button:last-child {
+  padding-right: 3px;
+}
+
+#panel .window-controls-box .icon {
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  border: 0;
+}

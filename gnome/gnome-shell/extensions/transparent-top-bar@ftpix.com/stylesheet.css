@@ -1,0 +1,635 @@
+#panel.transparent-top-bar--solid {
+  transition-duration: 300ms; }
+
+#panel.transparent-top-bar--transparent {
+  transition-duration: 500ms; }
+
+#panel.transparent-top-bar--transparent-0 {
+  background-color: rgba(0, 0, 0, 0); }
+
+#panel.transparent-top-bar--transparent-0 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0); }
+
+#panel.transparent-top-bar--transparent-1 {
+  background-color: rgba(0, 0, 0, 0.01); }
+
+#panel.transparent-top-bar--transparent-1 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.01); }
+
+#panel.transparent-top-bar--transparent-2 {
+  background-color: rgba(0, 0, 0, 0.02); }
+
+#panel.transparent-top-bar--transparent-2 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.02); }
+
+#panel.transparent-top-bar--transparent-3 {
+  background-color: rgba(0, 0, 0, 0.03); }
+
+#panel.transparent-top-bar--transparent-3 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.03); }
+
+#panel.transparent-top-bar--transparent-4 {
+  background-color: rgba(0, 0, 0, 0.04); }
+
+#panel.transparent-top-bar--transparent-4 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.04); }
+
+#panel.transparent-top-bar--transparent-5 {
+  background-color: rgba(0, 0, 0, 0.05); }
+
+#panel.transparent-top-bar--transparent-5 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.05); }
+
+#panel.transparent-top-bar--transparent-6 {
+  background-color: rgba(0, 0, 0, 0.06); }
+
+#panel.transparent-top-bar--transparent-6 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.06); }
+
+#panel.transparent-top-bar--transparent-7 {
+  background-color: rgba(0, 0, 0, 0.07); }
+
+#panel.transparent-top-bar--transparent-7 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.07); }
+
+#panel.transparent-top-bar--transparent-8 {
+  background-color: rgba(0, 0, 0, 0.08); }
+
+#panel.transparent-top-bar--transparent-8 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.08); }
+
+#panel.transparent-top-bar--transparent-9 {
+  background-color: rgba(0, 0, 0, 0.09); }
+
+#panel.transparent-top-bar--transparent-9 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.09); }
+
+#panel.transparent-top-bar--transparent-10 {
+  background-color: rgba(0, 0, 0, 0.1); }
+
+#panel.transparent-top-bar--transparent-10 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.1); }
+
+#panel.transparent-top-bar--transparent-11 {
+  background-color: rgba(0, 0, 0, 0.11); }
+
+#panel.transparent-top-bar--transparent-11 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.11); }
+
+#panel.transparent-top-bar--transparent-12 {
+  background-color: rgba(0, 0, 0, 0.12); }
+
+#panel.transparent-top-bar--transparent-12 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.12); }
+
+#panel.transparent-top-bar--transparent-13 {
+  background-color: rgba(0, 0, 0, 0.13); }
+
+#panel.transparent-top-bar--transparent-13 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.13); }
+
+#panel.transparent-top-bar--transparent-14 {
+  background-color: rgba(0, 0, 0, 0.14); }
+
+#panel.transparent-top-bar--transparent-14 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.14); }
+
+#panel.transparent-top-bar--transparent-15 {
+  background-color: rgba(0, 0, 0, 0.15); }
+
+#panel.transparent-top-bar--transparent-15 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.15); }
+
+#panel.transparent-top-bar--transparent-16 {
+  background-color: rgba(0, 0, 0, 0.16); }
+
+#panel.transparent-top-bar--transparent-16 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.16); }
+
+#panel.transparent-top-bar--transparent-17 {
+  background-color: rgba(0, 0, 0, 0.17); }
+
+#panel.transparent-top-bar--transparent-17 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.17); }
+
+#panel.transparent-top-bar--transparent-18 {
+  background-color: rgba(0, 0, 0, 0.18); }
+
+#panel.transparent-top-bar--transparent-18 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.18); }
+
+#panel.transparent-top-bar--transparent-19 {
+  background-color: rgba(0, 0, 0, 0.19); }
+
+#panel.transparent-top-bar--transparent-19 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.19); }
+
+#panel.transparent-top-bar--transparent-20 {
+  background-color: rgba(0, 0, 0, 0.2); }
+
+#panel.transparent-top-bar--transparent-20 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.2); }
+
+#panel.transparent-top-bar--transparent-21 {
+  background-color: rgba(0, 0, 0, 0.21); }
+
+#panel.transparent-top-bar--transparent-21 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.21); }
+
+#panel.transparent-top-bar--transparent-22 {
+  background-color: rgba(0, 0, 0, 0.22); }
+
+#panel.transparent-top-bar--transparent-22 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.22); }
+
+#panel.transparent-top-bar--transparent-23 {
+  background-color: rgba(0, 0, 0, 0.23); }
+
+#panel.transparent-top-bar--transparent-23 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.23); }
+
+#panel.transparent-top-bar--transparent-24 {
+  background-color: rgba(0, 0, 0, 0.24); }
+
+#panel.transparent-top-bar--transparent-24 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.24); }
+
+#panel.transparent-top-bar--transparent-25 {
+  background-color: rgba(0, 0, 0, 0.25); }
+
+#panel.transparent-top-bar--transparent-25 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.25); }
+
+#panel.transparent-top-bar--transparent-26 {
+  background-color: rgba(0, 0, 0, 0.26); }
+
+#panel.transparent-top-bar--transparent-26 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.26); }
+
+#panel.transparent-top-bar--transparent-27 {
+  background-color: rgba(0, 0, 0, 0.27); }
+
+#panel.transparent-top-bar--transparent-27 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.27); }
+
+#panel.transparent-top-bar--transparent-28 {
+  background-color: rgba(0, 0, 0, 0.28); }
+
+#panel.transparent-top-bar--transparent-28 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.28); }
+
+#panel.transparent-top-bar--transparent-29 {
+  background-color: rgba(0, 0, 0, 0.29); }
+
+#panel.transparent-top-bar--transparent-29 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.29); }
+
+#panel.transparent-top-bar--transparent-30 {
+  background-color: rgba(0, 0, 0, 0.3); }
+
+#panel.transparent-top-bar--transparent-30 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.3); }
+
+#panel.transparent-top-bar--transparent-31 {
+  background-color: rgba(0, 0, 0, 0.31); }
+
+#panel.transparent-top-bar--transparent-31 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.31); }
+
+#panel.transparent-top-bar--transparent-32 {
+  background-color: rgba(0, 0, 0, 0.32); }
+
+#panel.transparent-top-bar--transparent-32 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.32); }
+
+#panel.transparent-top-bar--transparent-33 {
+  background-color: rgba(0, 0, 0, 0.33); }
+
+#panel.transparent-top-bar--transparent-33 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.33); }
+
+#panel.transparent-top-bar--transparent-34 {
+  background-color: rgba(0, 0, 0, 0.34); }
+
+#panel.transparent-top-bar--transparent-34 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.34); }
+
+#panel.transparent-top-bar--transparent-35 {
+  background-color: rgba(0, 0, 0, 0.35); }
+
+#panel.transparent-top-bar--transparent-35 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.35); }
+
+#panel.transparent-top-bar--transparent-36 {
+  background-color: rgba(0, 0, 0, 0.36); }
+
+#panel.transparent-top-bar--transparent-36 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.36); }
+
+#panel.transparent-top-bar--transparent-37 {
+  background-color: rgba(0, 0, 0, 0.37); }
+
+#panel.transparent-top-bar--transparent-37 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.37); }
+
+#panel.transparent-top-bar--transparent-38 {
+  background-color: rgba(0, 0, 0, 0.38); }
+
+#panel.transparent-top-bar--transparent-38 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.38); }
+
+#panel.transparent-top-bar--transparent-39 {
+  background-color: rgba(0, 0, 0, 0.39); }
+
+#panel.transparent-top-bar--transparent-39 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.39); }
+
+#panel.transparent-top-bar--transparent-40 {
+  background-color: rgba(0, 0, 0, 0.4); }
+
+#panel.transparent-top-bar--transparent-40 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.4); }
+
+#panel.transparent-top-bar--transparent-41 {
+  background-color: rgba(0, 0, 0, 0.41); }
+
+#panel.transparent-top-bar--transparent-41 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.41); }
+
+#panel.transparent-top-bar--transparent-42 {
+  background-color: rgba(0, 0, 0, 0.42); }
+
+#panel.transparent-top-bar--transparent-42 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.42); }
+
+#panel.transparent-top-bar--transparent-43 {
+  background-color: rgba(0, 0, 0, 0.43); }
+
+#panel.transparent-top-bar--transparent-43 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.43); }
+
+#panel.transparent-top-bar--transparent-44 {
+  background-color: rgba(0, 0, 0, 0.44); }
+
+#panel.transparent-top-bar--transparent-44 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.44); }
+
+#panel.transparent-top-bar--transparent-45 {
+  background-color: rgba(0, 0, 0, 0.45); }
+
+#panel.transparent-top-bar--transparent-45 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.45); }
+
+#panel.transparent-top-bar--transparent-46 {
+  background-color: rgba(0, 0, 0, 0.46); }
+
+#panel.transparent-top-bar--transparent-46 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.46); }
+
+#panel.transparent-top-bar--transparent-47 {
+  background-color: rgba(0, 0, 0, 0.47); }
+
+#panel.transparent-top-bar--transparent-47 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.47); }
+
+#panel.transparent-top-bar--transparent-48 {
+  background-color: rgba(0, 0, 0, 0.48); }
+
+#panel.transparent-top-bar--transparent-48 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.48); }
+
+#panel.transparent-top-bar--transparent-49 {
+  background-color: rgba(0, 0, 0, 0.49); }
+
+#panel.transparent-top-bar--transparent-49 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.49); }
+
+#panel.transparent-top-bar--transparent-50 {
+  background-color: rgba(0, 0, 0, 0.5); }
+
+#panel.transparent-top-bar--transparent-50 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.5); }
+
+#panel.transparent-top-bar--transparent-51 {
+  background-color: rgba(0, 0, 0, 0.51); }
+
+#panel.transparent-top-bar--transparent-51 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.51); }
+
+#panel.transparent-top-bar--transparent-52 {
+  background-color: rgba(0, 0, 0, 0.52); }
+
+#panel.transparent-top-bar--transparent-52 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.52); }
+
+#panel.transparent-top-bar--transparent-53 {
+  background-color: rgba(0, 0, 0, 0.53); }
+
+#panel.transparent-top-bar--transparent-53 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.53); }
+
+#panel.transparent-top-bar--transparent-54 {
+  background-color: rgba(0, 0, 0, 0.54); }
+
+#panel.transparent-top-bar--transparent-54 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.54); }
+
+#panel.transparent-top-bar--transparent-55 {
+  background-color: rgba(0, 0, 0, 0.55); }
+
+#panel.transparent-top-bar--transparent-55 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.55); }
+
+#panel.transparent-top-bar--transparent-56 {
+  background-color: rgba(0, 0, 0, 0.56); }
+
+#panel.transparent-top-bar--transparent-56 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.56); }
+
+#panel.transparent-top-bar--transparent-57 {
+  background-color: rgba(0, 0, 0, 0.57); }
+
+#panel.transparent-top-bar--transparent-57 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.57); }
+
+#panel.transparent-top-bar--transparent-58 {
+  background-color: rgba(0, 0, 0, 0.58); }
+
+#panel.transparent-top-bar--transparent-58 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.58); }
+
+#panel.transparent-top-bar--transparent-59 {
+  background-color: rgba(0, 0, 0, 0.59); }
+
+#panel.transparent-top-bar--transparent-59 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.59); }
+
+#panel.transparent-top-bar--transparent-60 {
+  background-color: rgba(0, 0, 0, 0.6); }
+
+#panel.transparent-top-bar--transparent-60 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.6); }
+
+#panel.transparent-top-bar--transparent-61 {
+  background-color: rgba(0, 0, 0, 0.61); }
+
+#panel.transparent-top-bar--transparent-61 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.61); }
+
+#panel.transparent-top-bar--transparent-62 {
+  background-color: rgba(0, 0, 0, 0.62); }
+
+#panel.transparent-top-bar--transparent-62 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.62); }
+
+#panel.transparent-top-bar--transparent-63 {
+  background-color: rgba(0, 0, 0, 0.63); }
+
+#panel.transparent-top-bar--transparent-63 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.63); }
+
+#panel.transparent-top-bar--transparent-64 {
+  background-color: rgba(0, 0, 0, 0.64); }
+
+#panel.transparent-top-bar--transparent-64 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.64); }
+
+#panel.transparent-top-bar--transparent-65 {
+  background-color: rgba(0, 0, 0, 0.65); }
+
+#panel.transparent-top-bar--transparent-65 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.65); }
+
+#panel.transparent-top-bar--transparent-66 {
+  background-color: rgba(0, 0, 0, 0.66); }
+
+#panel.transparent-top-bar--transparent-66 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.66); }
+
+#panel.transparent-top-bar--transparent-67 {
+  background-color: rgba(0, 0, 0, 0.67); }
+
+#panel.transparent-top-bar--transparent-67 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.67); }
+
+#panel.transparent-top-bar--transparent-68 {
+  background-color: rgba(0, 0, 0, 0.68); }
+
+#panel.transparent-top-bar--transparent-68 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.68); }
+
+#panel.transparent-top-bar--transparent-69 {
+  background-color: rgba(0, 0, 0, 0.69); }
+
+#panel.transparent-top-bar--transparent-69 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.69); }
+
+#panel.transparent-top-bar--transparent-70 {
+  background-color: rgba(0, 0, 0, 0.7); }
+
+#panel.transparent-top-bar--transparent-70 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.7); }
+
+#panel.transparent-top-bar--transparent-71 {
+  background-color: rgba(0, 0, 0, 0.71); }
+
+#panel.transparent-top-bar--transparent-71 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.71); }
+
+#panel.transparent-top-bar--transparent-72 {
+  background-color: rgba(0, 0, 0, 0.72); }
+
+#panel.transparent-top-bar--transparent-72 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.72); }
+
+#panel.transparent-top-bar--transparent-73 {
+  background-color: rgba(0, 0, 0, 0.73); }
+
+#panel.transparent-top-bar--transparent-73 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.73); }
+
+#panel.transparent-top-bar--transparent-74 {
+  background-color: rgba(0, 0, 0, 0.74); }
+
+#panel.transparent-top-bar--transparent-74 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.74); }
+
+#panel.transparent-top-bar--transparent-75 {
+  background-color: rgba(0, 0, 0, 0.75); }
+
+#panel.transparent-top-bar--transparent-75 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.75); }
+
+#panel.transparent-top-bar--transparent-76 {
+  background-color: rgba(0, 0, 0, 0.76); }
+
+#panel.transparent-top-bar--transparent-76 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.76); }
+
+#panel.transparent-top-bar--transparent-77 {
+  background-color: rgba(0, 0, 0, 0.77); }
+
+#panel.transparent-top-bar--transparent-77 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.77); }
+
+#panel.transparent-top-bar--transparent-78 {
+  background-color: rgba(0, 0, 0, 0.78); }
+
+#panel.transparent-top-bar--transparent-78 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.78); }
+
+#panel.transparent-top-bar--transparent-79 {
+  background-color: rgba(0, 0, 0, 0.79); }
+
+#panel.transparent-top-bar--transparent-79 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.79); }
+
+#panel.transparent-top-bar--transparent-80 {
+  background-color: rgba(0, 0, 0, 0.8); }
+
+#panel.transparent-top-bar--transparent-80 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.8); }
+
+#panel.transparent-top-bar--transparent-81 {
+  background-color: rgba(0, 0, 0, 0.81); }
+
+#panel.transparent-top-bar--transparent-81 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.81); }
+
+#panel.transparent-top-bar--transparent-82 {
+  background-color: rgba(0, 0, 0, 0.82); }
+
+#panel.transparent-top-bar--transparent-82 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.82); }
+
+#panel.transparent-top-bar--transparent-83 {
+  background-color: rgba(0, 0, 0, 0.83); }
+
+#panel.transparent-top-bar--transparent-83 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.83); }
+
+#panel.transparent-top-bar--transparent-84 {
+  background-color: rgba(0, 0, 0, 0.84); }
+
+#panel.transparent-top-bar--transparent-84 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.84); }
+
+#panel.transparent-top-bar--transparent-85 {
+  background-color: rgba(0, 0, 0, 0.85); }
+
+#panel.transparent-top-bar--transparent-85 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.85); }
+
+#panel.transparent-top-bar--transparent-86 {
+  background-color: rgba(0, 0, 0, 0.86); }
+
+#panel.transparent-top-bar--transparent-86 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.86); }
+
+#panel.transparent-top-bar--transparent-87 {
+  background-color: rgba(0, 0, 0, 0.87); }
+
+#panel.transparent-top-bar--transparent-87 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.87); }
+
+#panel.transparent-top-bar--transparent-88 {
+  background-color: rgba(0, 0, 0, 0.88); }
+
+#panel.transparent-top-bar--transparent-88 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.88); }
+
+#panel.transparent-top-bar--transparent-89 {
+  background-color: rgba(0, 0, 0, 0.89); }
+
+#panel.transparent-top-bar--transparent-89 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.89); }
+
+#panel.transparent-top-bar--transparent-90 {
+  background-color: rgba(0, 0, 0, 0.9); }
+
+#panel.transparent-top-bar--transparent-90 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.9); }
+
+#panel.transparent-top-bar--transparent-91 {
+  background-color: rgba(0, 0, 0, 0.91); }
+
+#panel.transparent-top-bar--transparent-91 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.91); }
+
+#panel.transparent-top-bar--transparent-92 {
+  background-color: rgba(0, 0, 0, 0.92); }
+
+#panel.transparent-top-bar--transparent-92 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.92); }
+
+#panel.transparent-top-bar--transparent-93 {
+  background-color: rgba(0, 0, 0, 0.93); }
+
+#panel.transparent-top-bar--transparent-93 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.93); }
+
+#panel.transparent-top-bar--transparent-94 {
+  background-color: rgba(0, 0, 0, 0.94); }
+
+#panel.transparent-top-bar--transparent-94 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.94); }
+
+#panel.transparent-top-bar--transparent-95 {
+  background-color: rgba(0, 0, 0, 0.95); }
+
+#panel.transparent-top-bar--transparent-95 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.95); }
+
+#panel.transparent-top-bar--transparent-96 {
+  background-color: rgba(0, 0, 0, 0.96); }
+
+#panel.transparent-top-bar--transparent-96 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.96); }
+
+#panel.transparent-top-bar--transparent-97 {
+  background-color: rgba(0, 0, 0, 0.97); }
+
+#panel.transparent-top-bar--transparent-97 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.97); }
+
+#panel.transparent-top-bar--transparent-98 {
+  background-color: rgba(0, 0, 0, 0.98); }
+
+#panel.transparent-top-bar--transparent-98 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.98); }
+
+#panel.transparent-top-bar--transparent-99 {
+  background-color: rgba(0, 0, 0, 0.99); }
+
+#panel.transparent-top-bar--transparent-99 .panel-corner {
+  -panel-corner-background-color: rgba(0, 0, 0, 0.99); }
+
+#panel.transparent-top-bar--transparent-100 {
+  background-color: black; }
+
+#panel.transparent-top-bar--transparent-100 .panel-corner {
+  -panel-corner-background-color: black; }
+
+#panel.transparent-top-bar--transparent .panel-button {
+  color: #eee;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.9);
+  transition-duration: 100ms; }
+
+#panel.transparent-top-bar--transparent .system-status-icon,
+#panel.transparent-top-bar--transparent .app-menu-icon > StIcon,
+#panel.transparent-top-bar--transparent .popup-menu-arrow {
+  icon-shadow: 0px 1px 2px rgba(0, 0, 0, 0.9); }
+
+#panel.transparent-top-bar--transparent:hover {
+  text-shadow: 0px 1px 6px black; }
+
+#panel.transparent-top-bar--transparent:hover .system-status-icon,
+#panel.transparent-top-bar--transparent:hover .app-menu-icon > StIcon,
+#panel.transparent-top-bar--transparent:hover .popup-menu-arrow {
+  icon-shadow: 0px 1px 6px black; }
+
+#panel.transparent-top-bar--transparent:active .system-status-icon,
+#panel.transparent-top-bar--transparent:overview .system-status-icon,
+#panel.transparent-top-bar--transparent:focus .system-status-icon,
+#panel.transparent-top-bar--transparent:checked .system-status-icon {
+  icon-shadow: black 0 2px 2px; }

@@ -1,0 +1,202 @@
+# Dutch translation for gnome-shell-extension-vitals.
+#
+# This file is distributed under the same license as the
+# gnome-shell-extension-vitals package.
+#
+# wouter bolsterlee <wouter@bolsterl.ee>, 2018
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extension-vitals\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: nl\n"
+"MIME-Version: 1.0\n"
+"Last-Translator: wouter bolsterlee\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nl\n"
+
+#: general
+msgid "Average"
+msgstr "Gemiddelde"
+
+#: main menu
+msgid "Temperature"
+msgstr "Temperatuur"
+
+msgid "Voltage"
+msgstr "Spanning"
+
+msgid "Fan"
+msgstr "Ventilator"
+
+msgid "Memory"
+msgstr "Geheugen"
+
+msgid "Processor"
+msgstr "Processor"
+
+msgid "System"
+msgstr "Systeem"
+
+msgid "Network"
+msgstr "Netwerk"
+
+msgid "Storage"
+msgstr "Opslag"
+
+#: temperature
+msgid "Core %d"
+msgstr "Processor %d"
+
+#: voltage fan memory
+msgid "Usage"
+msgstr "Verbruik"
+
+msgid "Physical"
+msgstr "Fysiek"
+
+msgid "Available"
+msgstr "Beschikbaar"
+
+msgid "Allocated"
+msgstr "Gealloceerd"
+
+msgid "Swap Used"
+msgstr "Gebruikte swap"
+
+#: processor
+msgid "Frequency"
+msgstr "Frequentie"
+
+#: system
+msgid "Load 1m"
+msgstr "Belasting 1m"
+
+msgid "Load 5m"
+msgstr "Belasting 5m"
+
+msgid "Load 15m"
+msgstr "Belasting 15m"
+
+msgid "Threads Active"
+msgstr "Threads (actief)"
+
+msgid "Threads Total"
+msgstr "Threads (totaal)"
+
+#: network
+msgid "Maximum rx"
+msgstr "Maximum rx"
+
+msgid "Maximum tx"
+msgstr "Maximum tx"
+
+msgid "Public IP"
+msgstr "Publiek IP"
+
+#: storage
+msgid "Total"
+msgstr "Totaal"
+
+msgid "Used"
+msgstr "Gebruikt"
+
+msgid "Reserved"
+msgstr "Gereserveerd"
+
+msgid "Free"
+msgstr "Vrij"
+
+#: prefs general
+msgid "Seconds between updates"
+msgstr "Aantal seconden tussen updates"
+
+msgid "Position in panel"
+msgstr "Paneelpositie"
+
+msgid "Right"
+msgstr "Rechts"
+
+msgid "Center"
+msgstr "Midden"
+
+msgid "Left"
+msgstr "Linkss"
+
+msgid "Use higher precision"
+msgstr "Hogere precisie gebruiken"
+
+msgid "Alphabetize sensors"
+msgstr "Sensors sorteren"
+
+msgid "Hide zero values"
+msgstr "Nulwaarden tonen"
+
+msgid "Format"
+msgstr "Formaat"
+
+#: prefs about
+msgid "Feature requests or bugs? Please visit <a href=\""
+"https://github.com/corecoding/Vitals/issues\">GitHub</a>. "
+"No warranty, expressed or implied. <a href=\"https://"
+"corecoding.com/donate.php\">Donate</a> if you found this useful."
+msgstr ""
+"Vind je het leuk wat je ziet? Ondersteuning van de ontwikkeling van deze extensie via "
+"<a href=\"https://corecoding.com/donate.php\">PayPal</a>.\n\n"
+"Geen garantie, expliciet of impliciet. Functieverzoeken of bugs? Bezoek ons "
+"<a href=\"https://github.com/corecoding/Vitals\">GitHub-project</a>."
+
+#: prefs sensors
+msgid "Monitor temperature"
+msgstr "Temperatuur monitoren"
+
+msgid "Unit"
+msgstr "Eenheid"
+
+msgid "Monitor voltage"
+msgstr "Spanning monitoren"
+
+msgid "Monitor fan"
+msgstr "Ventilator monitoren"
+
+msgid "Monitor memory"
+msgstr "Geheugen monitoren"
+
+msgid "Monitor processor"
+msgstr "Processos monitoren"
+
+msgid "Monitor system"
+msgstr "Systeem monitoren"
+
+msgid "Monitor network"
+msgstr "Netwerk monitoren"
+
+msgid "Include public IP address"
+msgstr "Publiek IP-adresss tonen"
+
+msgid "Monitor storage"
+msgstr "Opslag monitoren"
+
+msgid "Temperature Preferences"
+msgstr "Temperatuurvoorkeuren"
+
+msgid "Network Preferences"
+msgstr "Netwerkvoorkeuren"
+
+msgid "Storage Preferences"
+msgstr "Opslagvoorkeuren"
+
+msgid "Path"
+msgstr "Pad"
+
+msgid "General"
+msgstr "Algemeen"
+
+msgid "About"
+msgstr "Wat betreft"
+
+msgid "Sensors"
+msgstr "Sensoren"

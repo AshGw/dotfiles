@@ -1,0 +1,8 @@
+[Theme]
+Name=Canta
+
+[Dark]
+Style=stylesheet.css
+
+[Light]
+Style=stylesheet.css

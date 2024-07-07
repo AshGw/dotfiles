@@ -1,0 +1,100 @@
+<schemalist gettext-domain="gnome-shell-extensions">
+
+  <enum id="org.gnome.shell.extensions.no-title-bar.buttonPosition">
+      <value value="0" nick="before-app-menu" />
+      <value value="1" nick="after-app-menu" />
+      <value value="2" nick="within-status-area" />
+      <value value="3" nick="before-status-area" />
+      <value value="4" nick="after-status-area" />
+      <value value="5" nick="hidden" />
+  </enum>
+
+  <enum id="org.gnome.shell.extensions.no-title-bar.ignoreListType">
+      <value value="0" nick="disabled" />
+      <value value="1" nick="whitelist" />
+      <value value="2" nick="blacklist" />
+  </enum>
+
+  <schema id="org.gnome.shell.extensions.no-title-bar"
+      path="/org/gnome/shell/extensions/no-title-bar/">
+
+    <key name="debug-mode" type="b">
+      <default>false</default>
+      <summary>Enable the debug mode for verbose logging and troubleshooting</summary>
+      <description>If active, the extension will verbosely log information on windows and states to the journal. Only activate when you are trying to troubleshoot problems.</description>
+    </key>
+
+    <key name="only-main-monitor" type="b">
+      <default>true</default>
+        <summary>Only remove the top bar of windows in the main monitor.</summary>
+        <description>If windows are on an external monitor, this setting will ensure the top bar stays visible.</description>
+    </key>
+
+    <key name="button-position" enum="org.gnome.shell.extensions.no-title-bar.buttonPosition">
+      <default>'within-status-area'</default>
+        <summary>Button position in the top panel</summary>
+        <description>Controls whether and where buttons of maximized windows appear in the top panel. Possible values are: "before-app-menu" to display buttons before the application name, "after-app-menu" to display buttons after the application name, "within-status-area" to display buttons within the system status area, "after-status-area" to display buttons after the system status area and "hidden" to not show buttons at all.</description>
+    </key>
+
+    <key type="s" name="theme">
+      <default>"default"</default>
+      <summary>Theme</summary>
+      <description>The name of the theme to use (must be one of the folders in [extensionPath]/themes).</description>
+  </key>
+
+    <key name="automatic-theme" type="b">
+      <default>true</default>
+        <summary>Detect and use Gtk theme.</summary>
+        <description>Try to automatically detect the Gtk theme in use. If tis fails, the default one is used instead.</description>
+    </key>
+
+    <key name="change-appmenu" type="b">
+      <default>true</default>
+        <summary>Use window title to replace the app-menu label.</summary>
+        <description>The app-menu uses the app-name as the label for the button. Use instead the window title of the focused window.</description>
+    </key>
+
+    <key type="i" name="app-menu-width">
+      <default>-1</default>
+      <summary>Maximum title length</summary>
+      <description>Maximum length allowed for the title of the app-menu, in pixels.</description>
+    </key>
+
+    <key name="title-for-snapped" type="b">
+      <default>true</default>
+        <summary>Customize app-menu for vertically maximized windows.</summary>
+        <description>Customize app-menu in the top bar when windows are snapped to the sides, or maximized vertically.</description>
+    </key>
+
+    <key name="buttons-for-all-win" type="b">
+      <default>true</default>
+        <summary>Show buttons for all windows.</summary>
+        <description>Show buttons in the top bar even if windows are not maximized, or still have a title bar.</description>
+    </key>
+
+    <key name="buttons-for-snapped" type="b">
+      <default>true</default>
+        <summary>Show buttons for vertically maximized windows.</summary>
+        <description>Show buttons in the top bar when windows are snapped to the sides, or maximized vertically.</description>
+    </key>
+
+    <key name="hide-buttons" type="b">
+      <default>true</default>
+        <summary>Autohide buttons.</summary>
+        <description>Works when buttons are set after app menu.</description>
+    </key>
+
+    <key name="ignore-list-type" enum="org.gnome.shell.extensions.no-title-bar.ignoreListType">
+      <default>'disabled'</default>
+        <summary>Choose from disabled, whitelist or blacklist.</summary>
+        <description>Disabled: no filtering applied. Whitelist: remove title bar for applications on this list. Blacklist: remove title bar from all applications except the ones on this list.</description>
+    </key>
+
+    <key type="s" name="ignore-list">
+      <default>""</default>
+      <summary>List of applications in the white/black-list.</summary>
+      <description></description>
+    </key>
+
+  </schema>
+</schemalist>

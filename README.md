@@ -13,6 +13,32 @@ Actually, if you're not on Debian, install Git, Zsh, and xz (hopefully no [backd
 ![kruger](https://github-production-user-asset-6210df.s3.amazonaws.com/126174609/333013594-ceaf6b9f-2d67-4fb8-89b1-51e1a746c77c.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240523%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240523T022843Z&X-Amz-Expires=300&X-Amz-Signature=6715084f6a03101580b34a5c0f7b32e1f8c8faad6fdc9aaa3afccbe31023946f&X-Amz-SignedHeaders=host&actor_id=126174609&key_id=0&repo_id=723693556)
 
 I'm currently on the slope of enlightenment.
+#### Overview
+
+<div style="display: flex; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 200px; margin: 5px;">
+    <img src="./images/p1.png" alt="Image 1" style="width: 100%;">
+  </div>
+  <div style="flex: 1; min-width: 200px; margin: 5px;">
+    <img src="./images/p4.png" alt="Image 4" style="width: 100%;">
+  </div>
+  <div style="flex: 1; min-width: 200px; margin: 5px;">
+    <img src="./images/p5.png" alt="Image 5" style="width: 100%;">
+  </div>
+  <div style="flex: 1; min-width: 200px; margin: 5px;">
+    <img src="./images/p6.png" alt="Image 6" style="width: 100%;">
+  </div>
+  <div style="flex: 1; min-width: 200px; margin: 5px;">
+    <img src="./images/p7.png" alt="Image 7" style="width: 100%;">
+  </div>
+  <div style="flex: 1; min-width: 200px; margin: 5px;">
+    <img src="./images/p8.png" alt="Image 8" style="width: 100%;">
+  </div>
+  <div style="flex: 1; min-width: 200px; margin: 5px;">
+    <img src="./images/p9.png" alt="Image 9" style="width: 100%;">
+  </div>
+</div>
+
 
 #### Workflow
 

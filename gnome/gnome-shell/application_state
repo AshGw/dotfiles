@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<application-state>
+  <context id="">
+    <application id="gnome-control-center.desktop" score="211.25" last-seen="1720382334"/>
+    <application id="xdg-desktop-portal-gtk.desktop" score="0" last-seen="1719939771"/>
+    <application id="apport-gtk.desktop" score="0.25" last-seen="1720195721"/>
+    <application id="org.gnome.DejaDup.desktop" score="0" last-seen="1720284182"/>
+    <application id="com.mattjakeman.ExtensionManager.desktop" score="71.75" last-seen="1720376342"/>
+    <application id="org.gnome.tweaks.desktop" score="98" last-seen="1720284218"/>
+    <application id="firefox.desktop" score="7267.5" last-seen="1720306074"/>
+    <application id="feh.desktop" score="0" last-seen="1719957867"/>
+    <application id="org.gnome.eog.desktop" score="22" last-seen="1720360763"/>
+    <application id="thunderbird.desktop" score="0" last-seen="1720118464"/>
+    <application id="protonvpn-app.desktop" score="5.5" last-seen="1720118100"/>
+    <application id="ca.desrt.dconf-editor.desktop" score="2.25" last-seen="1719940753"/>
+    <application id="diodon.desktop" score="1.5" last-seen="1720037537"/>
+    <application id="spotify_spotify.desktop" score="1.5" last-seen="1720054377"/>
+    <application id="org.gnome.Calculator.desktop" score="5" last-seen="1720257852"/>
+    <application id="code_code.desktop" score="13839.75" last-seen="1720360785"/>
+    <application id="org.gnome.Terminal.desktop" score="8058" last-seen="1720382998"/>
+    <application id="org.gnome.Shell.Extensions.desktop" score="97.25" last-seen="1720277755"/>
+    <application id="librewolf.desktop" score="0.5" last-seen="1720273431"/>
+    <application id="xiterm+thai.desktop" score="0" last-seen="1719871068"/>
+    <application id="org.gnome.Nautilus.desktop" score="48.75" last-seen="1720360775"/>
+    <application id="snap-store_snap-store.desktop" score="0.25" last-seen="1719941541"/>
+    <application id="obsidian_obsidian.desktop" score="0" last-seen="1720257124"/>
+    <application id="yelp.desktop" score="3.5" last-seen="1720257706"/>
+    <application id="org.gnome.Totem.desktop" score="0.75" last-seen="1720275112"/>
+    <application id="update-manager.desktop" score="0" last-seen="1720257252"/>
+    <application id="google-chrome.desktop" score="7178.25" last-seen="1720382998"/>
+    <application id="display-im6.q16.desktop" score="0" last-seen="1719956241"/>
+  </context>
+</application-state>

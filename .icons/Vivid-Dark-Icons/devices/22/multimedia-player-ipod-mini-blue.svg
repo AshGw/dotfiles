@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 22 22"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="multimedia-player-ipod-mini-blue.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="34.727273"
+     inkscape:cx="11"
+     inkscape:cy="11"
+     inkscape:window-width="1920"
+     inkscape:window-height="996"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs3051">
+    <style
+       type="text/css"
+       id="current-color-scheme">.ColorScheme-Text { color: #fcfcfc; } </style>
+  </defs>
+  <path
+     style="fill:#5599ff;fill-opacity:1;stroke:none"
+     d="M 5 3 L 5 19 L 17 19 L 17 3 L 5 3 z M 6 4 L 16 4 L 16 18 L 6 18 L 6 4 z M 7 5 L 7 10 L 15 10 L 15 5 L 7 5 z M 11 11 A 3 3 0 0 0 8 14 A 3 3 0 0 0 11 17 A 3 3 0 0 0 14 14 A 3 3 0 0 0 11 11 z M 11 12 A 2 2 0 0 1 13 14 A 2 2 0 0 1 11 16 A 2 2 0 0 1 9 14 A 2 2 0 0 1 11 12 z M 11 13 A 1 1 0 0 0 10 14 A 1 1 0 0 0 11 15 A 1 1 0 0 0 12 14 A 1 1 0 0 0 11 13 z "
+     class="ColorScheme-Text"
+     id="path1" />
+</svg>

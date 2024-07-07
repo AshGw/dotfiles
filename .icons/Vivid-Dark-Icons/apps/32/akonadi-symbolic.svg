@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="32"
+   height="32"
+   version="1.1"
+   id="svg12"
+   sodipodi:docname="akonadi-symbolic.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <g
+     id="22-22-akonadi"
+     transform="scale(1.4545455)">
+    <path
+       style="opacity:0.00100002;fill:#e5e9ef;fill-opacity:1"
+       d="M 0,0 H 22 V 22 H 0 Z"
+       id="path2" />
+    <path
+       id="rect4192-3"
+       inkscape:connector-curvature="0"
+       d="m 11.025119,2.7499999 c -4.5844695,0 -8.2751191,3.6795204 -8.2751191,8.2500261 0,0.051 0.00664,0.09998 0.00764,0.150466 -0.00205,0.05652 -0.00764,0.111397 -0.00764,0.168366 0,0.742963 0.1327625,1.453738 0.3646267,2.116177 1.0375152,3.374235 4.1772515,5.814964 7.9104924,5.814964 4.584677,0 8.275117,-3.679357 8.275117,-8.249919 0,-4.5705597 -3.69044,-8.2500801 -8.275117,-8.2500801 z m 0,1.8333555 c 3.565686,0 6.436094,2.8618946 6.436094,6.4166706 0,3.527247 -2.826697,6.369031 -6.353514,6.413182 2.177623,-0.685679 3.847631,-2.489967 4.329717,-4.746232 -1.174317,1.349862 -2.905339,2.205489 -4.847065,2.205489 -2.745707,0 -5.0700228,-1.7057 -5.9887999,-4.114129 C 4.7293795,7.3176528 7.5414704,4.5833554 11.025119,4.5833554 Z"
+       style="fill:url(#linearGradient4);fill-opacity:1;stroke-width:0.0530247"
+       sodipodi:nodetypes="sscscsssssccscs" />
+  </g>
+  <metadata
+     id="metadata18">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs16">
+    <linearGradient
+       id="linearGradient1"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#00aad4;stop-opacity:1"
+         offset="0"
+         id="stop1" />
+      <stop
+         style="stop-color:#80e5ff;stop-opacity:1"
+         offset="1"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1"
+       id="linearGradient4"
+       x1="3"
+       y1="11"
+       x2="19.00005"
+       y2="11"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0343867,0,0,1.0312499,-0.35316017,-0.34375009)" />
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#02334b"
+     bordercolor="#000000"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="994"
+     id="namedview14"
+     showgrid="true"
+     inkscape:zoom="7.9999996"
+     inkscape:cx="2.5000001"
+     inkscape:cy="18.625001"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg12"
+     inkscape:document-rotation="0"
+     showguides="false"
+     inkscape:pagecheckerboard="true"
+     inkscape:showpageshadow="true"
+     inkscape:deskcolor="#02334b">
+    <inkscape:grid
+       type="xygrid"
+       id="grid862"
+       originx="-32"
+       originy="-10.000001"
+       spacingy="1"
+       spacingx="1"
+       units="px"
+       visible="true" />
+  </sodipodi:namedview>
+</svg>
