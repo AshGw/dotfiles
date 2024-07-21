@@ -13,6 +13,11 @@ bash <(curl -L ashgw.me/api/v1/bootstrap)
     <img src="./images/p1.png" alt="Image 1" style="width: 100%;">
   </div>
   <div style="flex: 1; min-width: 200px; margin: 5px;">
+    <img src="./images/orange-ss.png" alt="Image 1" style="width: 100%;">
+  </div><div style="flex: 1; min-width: 200px; margin: 5px;">
+    <img src="./images/black-ss.png" alt="Image 1" style="width: 100%;">
+  </div>
+  <div style="flex: 1; min-width: 200px; margin: 5px;">
     <img src="./images/p5.png" alt="Image 5" style="width: 100%;">
   </div>
   <div style="flex: 1; min-width: 200px; margin: 5px;">
