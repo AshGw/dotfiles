@@ -1,6 +1,13 @@
-# Boilerplate
+
+# nix-env -iA nixpkgs.glibcLocales
+export LOCALE_ARCHIVE="$(nix-env --installed --no-name --out-path --query glibc-locales)/lib/locale/locale-archive"
+
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
+
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US:en
+export LC_ALL=en_US.UTF-8
 
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
@@ -9,7 +16,12 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-ZSH_THEME="robbyrussell"
+# Nix initialization
+if [ -e "$HOME/.nix-profile/etc/profile.d/nix.sh" ]; then
+    . "$HOME/.nix-profile/etc/profile.d/nix.sh"
+fi
+
+ZSH_THEME="bira"
 HIST_STAMPS="dd/mm/yyyy"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
@@ -37,7 +49,6 @@ compinit
 _comp_options+=(globdots)		# Include hidden files.
 
 # Some shortcuts
-
 
 alias \
 	c="clear" \
@@ -70,7 +81,6 @@ alias \
 	ez="eza --long --header --inode --git" \
 	ddgo="librewolf https://duckduckgo.com" \
 	gh="librewolf https://github.com/ashgw" \
-	d="docker" \
 	d_stopall="docker stop $(docker ps -a -q)" \
 	d_restratall="docker restart $(docker ps -a -q)" \
 	d_startall="docker start $(docker ps -a -q)" \
@@ -79,6 +89,12 @@ alias \
   	localip='ipconfig getifaddr en1' \
 	ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'" \
 	ports='lsof +c0 -iTCP -sTCP:LISTEN -n -P'
+
+plugins=(
+		zsh-syntax-highlighting
+		git
+		zsh-autosuggestions
+	)
 
 # Colors n all so run this: curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark --output ~/.dircolors
 eval `dircolors ~/.dircolors`
@@ -154,6 +170,9 @@ if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
 
+
+### zoxide
+eval "$(zoxide init bash)"
 ################################## Functions section ###########################################
 precmd() {
     # Print the previously configured title
@@ -289,3 +308,26 @@ weather() {
     fi
     printf "%s\n" "$SEP2"
 }
+
+eval "$(starship init zsh)"
+export PATH="$HOME/miniconda3/bin:$PATH"
+. /home/ashgw/miniconda3/etc/profile.d/conda.sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+# pnpm
+export PNPM_HOME="$HOME/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# go
+export PATH=$PATH:/$HOME/go/bin
+# Tfenv
+export PATH="$HOME/.tfenv/bin:$PATH"
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+# Poetry
+export PATH="$HOME/.local/bin:$PATH"
+# When GPG pwd verifcation screen doesn't show up on TTY
+export GPG_TTY=/dev/pts/0
