@@ -16,4 +16,8 @@
 
 [submodule "dotfiles/.wallpapers"]
     path = dotfiles/.wallpapers
-	url = https://github.com/ashgw/wallpapers.git
+    url = https://github.com/ashgw/wallpapers.git
+
+[submodule "dotfiles/.aws"]
+    path = dotfiles/.aws
+    url = https://github.com/ashgw/aws.git
