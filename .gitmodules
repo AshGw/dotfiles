@@ -4,11 +4,11 @@
 
 [submodule ".icons"]
     path = .icons
-	url = https://github.com/ashgw/icons.git
+	url = https://github.com/ashgw/.icons.git
 
 [submodule ".themes"]
     path = .themes
-    url = https://github.com/ashgw/themes.git
+    url = https://github.com/ashgw/.themes.git
 
 [submodule "personal"]
     path = personal
@@ -16,8 +16,8 @@
 
 [submodule ".wallpapers"]
     path = .wallpapers
-    url = https://github.com/ashgw/wallpapers.git
+    url = https://github.com/ashgw/.wallpapers.git
 
 [submodule ".aws"]
     path = .aws
-    url = https://github.com/ashgw/aws.git
+    url = https://github.com/ashgw/.aws.git
