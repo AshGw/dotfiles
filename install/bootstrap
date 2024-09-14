@@ -73,8 +73,8 @@ nix-env -iA nixpkgs.git \
     nixpkgs.zathura \
     nixpkgs.starship \
     nixpkgs.tor \
-    nixpkgs.tor-browser
-
+    nixpkgs.tor-browser \
+    nixpkgs.btop
 echo -e "${CYAN}The whole 9 setup.. ${ENDCOLOR}"
 
 mkdir work trash personal
