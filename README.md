@@ -1,9 +1,9 @@
 ### Setup
-#### Me:
+#### Me
 ```shell
 git clone --recurse-submodules git@github.com:ashgw/dotfiles.git
 ```
-#### Not me:
+#### Not me
 
 This will work on any POSIX machine, to:
 - Configure the terminal (ZSH, starship, zioxde, etc...)
