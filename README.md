@@ -1,10 +1,24 @@
-### Auto Setup
+### Setup
+#### Me:
+```shell
+git clone --recurse-submodules git@github.com:ashgw/dotfiles.git
+```
+#### Not me:
 
-simply run
+This will work on any POSIX machine, to:
+- Configure the terminal (ZSH, starship, zioxde, etc...)
+- SSH [setup](./.ssh/_gh_gen.sh)
+- Neovim, TMUX, FZF...
+- Nix
+- [Packages](./install/bootsrap) I use
+- [Languages](./install/arbitrary) I us
+- Git [configuration](./.gitconfig), (Aliases, multiple accounts, etc...)
 
+Run:
 ```shell
 bash <(curl -L ashgw.me/api/v1/bootstrap)
 ```
+
 
 #### Overview
 
