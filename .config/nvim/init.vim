@@ -1,17 +1,17 @@
+
 let mapleader =","
 
 " Auto plugin setup
 
 if ! filereadable(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/plug.vim"'))
-	echo "Downloading junegunn/vim-plug to manage plugins..."
-	silent !mkdir -p ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/
-	silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/plug.vim
-	autocmd VimEnter * PlugInstall
+    echo "Downloading junegunn/vim-plug to manage plugins..."
+    silent !mkdir -p ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/
+    silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/plug.vim
+    autocmd VimEnter * PlugInstall
 endif
 
 map ,, :keepp /<++><CR>ca<
 imap ,, <esc>:keepp /<++><CR>ca<
-
 
 "Basics"
 set shell=/bin/zsh
@@ -35,10 +35,11 @@ set nocompatible
 nnoremap c "_c
 filetype plugin on
 syntax on
-"All the plugins
 
+"All the plugins
 call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
-" Theme
+" Themes
+Plug 'Mofiqul/dracula.nvim'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 " helpers
 Plug 'tpope/vim-surround'
@@ -50,7 +51,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-commentary'
 
 " JS ecosystem setup
-
 Plug 'ap/vim-css-color'
 Plug 'pangloss/vim-javascript'    " JavaScript support
 Plug 'leafgarland/typescript-vim' " TypeScript syntax
@@ -69,19 +69,14 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-
 " CoC extensions
 let g:coc_global_extensions = ['coc-tsserver', 'coc-python', 'coc-rust-analyzer', 'coc-go', 'coc-docker']
 
-
 nnoremap <silent><leader>1 :source ~/.config/nvim/init.vim \| :PlugInstall<CR>
-
 
 " JS ECO done
 
-
 " more useful pluuugs 🌿
-
 let g:kite_supported_languages = ['python', 'javascript']
 
 Plug 'rust-lang/rust.vim'
@@ -108,7 +103,39 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
-"colorscheme gruvbox
+" Others
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" One more
+Plug 'wbthomason/packer.nvim'
+Plug 'svrana/neosolarized.nvim'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'onsails/lspkind-nvim'
+Plug 'L3MON4D3/LuaSnip'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'neovim/nvim-lspconfig'
+Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'MunifTanjim/prettier.nvim'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'glepnir/lspsaga.nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-file-browser.nvim'
+Plug 'windwp/nvim-autopairs'
+Plug 'windwp/nvim-ts-autotag'
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'akinsho/nvim-bufferline.lua'
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'dinhhuy258/git.nvim'
+Plug 'folke/zen-mode.nvim'
+Plug 'iamcco/markdown-preview.nvim'
+
+" colorscheme gruvbox
+
 let g:bargreybars_auto=0
 let g:airline_solorized_bg='dark'
 let g:airline_powerline_fonts=1
@@ -123,31 +150,29 @@ let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = '#'
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['nerdtree'] = '#'
 
-
-
 call plug#end()
 
 " Enable autocompletion:
 set wildmode=longest,list,full
 
+" Autocompletion with Tab
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Spell-check set to <leader>o, 'o' for 'orthography':
 map <leader>o :setlocal spell! spelllang=en_us<CR>
 
-
 " Splits open to the right != default left.
 set splitbelow splitright
-
 
 " Nerd tree
 map <leader>n :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 if has('nvim')
-	let NERDTreeBookmarksFile = stdpath('data') . '/NERDTreeBookmarks'
+    let NERDTreeBookmarksFile = stdpath('data') . '/NERDTreeBookmarks'
 else
-	let NERDTreeBookmarksFile = '~/.vim' . '/NERDTreeBookmarks'
+    let NERDTreeBookmarksFile = '~/.vim' . '/NERDTreeBookmarks'
 endif
-
 
 " vimling:
 nm <leader>d :call ToggleDeadKeys()<CR>
@@ -156,15 +181,13 @@ nm <leader>i :call ToggleIPA()<CR>
 imap <leader>i <esc>:call ToggleIPA()<CR>a
 nm <leader>q :call ToggleProse()<CR>
 
-
 " vim-airline
 if !exists('g:airline_symbols')
-	let g:airline_symbols = {}
+    let g:airline_symbols = {}
 endif
 let g:airline_symbols.colnr = ' C:'
 let g:airline_symbols.linenr = ' L:'
 let g:airline_symbols.maxlinenr = '☰ '
-
 
 " Shortcutting split navigation, saving a keypress:
 map <C-h> <C-w>h
@@ -172,14 +195,11 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-
 " Check file in shellcheck:
 map <leader>s :!clear && shellcheck -x %<CR>
 
-
 " Replace all is aliased to S.
 nnoremap S :%s//g<Left><Left>
-
 
 " Automatically deletes all trailing whitespace and newlines at end of file on save. & reset cursor position
 autocmd BufWritePre * let currPos = getpos(".")
@@ -189,12 +209,10 @@ autocmd BufWritePre *.[ch] %s/\%$/\r/e " add trailing newline for ANSI C standar
 autocmd BufWritePre *neomutt* %s/^--$/-- /e " dash-dash-space signature delimiter in emails
 autocmd BufWritePre * cal cursor(currPos[1], currPos[2])
 
-
 " Turns off highlighting on the bits of code that are changed, so the line that is changed is highlighted but the actual text that has changed stands out on the line and is readable.
 if &diff
     highlight! link DiffText MatchParen
 endif
-
 
 " Function for toggling the bottom statusbar:
 let s:hidden_all = 0
@@ -214,12 +232,19 @@ function! ToggleHiddenAll()
     endif
 endfunction
 
-
 nnoremap <leader>h :call ToggleHiddenAll()<CR>
+
 " default theme for now
+" colorscheme catppuccin-mocha
+colorscheme dracula
+"TAB compeletion
+inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-colorscheme catppuccin-mocha
+" Use Enter to accept the suggestion
+inoremap <expr> <CR> pumvisible() ? coc#pum#confirm() : "\<CR>"
 
 
-" aliases
-command! -nargs=* B Explore .. <args>
+
+" Transparent BG
+hi normal guibg=NONE
