@@ -1,23 +1,23 @@
-[submodule "dotfiles/gnome"]
-    path = dotfiles/gnome
+[submodule "gnome"]
+    path = gnome
 	url = https://github.com/ashgw/gnome.git
 
-[submodule "dotfiles/.icons"]
-    path = dotfiles/.icons
+[submodule ".icons"]
+    path = .icons
 	url = https://github.com/ashgw/icons.git
 
-[submodule "dotfiles/.themes"]
-    path = dotfiles/.themes
+[submodule ".themes"]
+    path = .themes
     url = https://github.com/ashgw/themes.git
 
-[submodule "dotfiles/personal"]
-    path = dotfiles/personal
+[submodule "personal"]
+    path = personal
     url = https://github.com/ashgw/personal.git
 
-[submodule "dotfiles/.wallpapers"]
-    path = dotfiles/.wallpapers
+[submodule ".wallpapers"]
+    path = .wallpapers
     url = https://github.com/ashgw/wallpapers.git
 
-[submodule "dotfiles/.aws"]
-    path = dotfiles/.aws
+[submodule ".aws"]
+    path = .aws
     url = https://github.com/ashgw/aws.git
