@@ -20,36 +20,26 @@ bash <(curl -L ashgw.me/api/v1/bootstrap)
 ```
 
 
-#### Overview
-
-<div style="display: flex; flex-wrap: wrap;">
-  <div style="flex: 1; min-width: 200px; margin: 5px;">
-    <img src="./images/pp2.png" alt="Image 1" style="width: 100%;">
-  </div>
-  <div style="flex: 1; min-width: 200px; margin: 5px;">
-    <img src="./images/pp1.png" alt="Image 1" style="width: 100%;">
-  </div>
-  <div style="flex: 1; min-width: 200px; margin: 5px;">
-    <img src="./images/tron.png" alt="Image 1" style="width: 100%;">
+### Overview
+##### New
+ <div style="flex: 1; min-width: 200px; margin: 5px;">
+    <img src="./images/new/plain.png" alt="Image 1" style="width: 100%;">
   </div>
 
-  <div style="flex: 1; min-width: 200px; margin: 5px;">
-    <img src="./images/btop.png" alt="Image 1" style="width: 100%;">
-  </div>
 
 
 <div style="flex: 1; min-width: 200px; margin: 5px;">
-    <img src="./images/zooties.png" alt="Image 1" style="width: 100%;">
+    <img src="./images/w-vim.png" alt="Image 1" style="width: 100%;">
   </div>
 
-  <div style="flex: 1; min-width: 200px; margin: 5px;">
-    <img src="./images/empty.png" alt="Image 1" style="width: 100%;">
+ <div style="flex: 1; min-width: 200px; margin: 5px;">
+    <img src="./images/new/btop.png" alt="Image 1" style="width: 100%;">
   </div>
 
-  <div style="flex: 1; min-width: 200px; margin: 5px;">
-    <img src="./images/munchies.png" alt="Image 1" style="width: 100%;">
+ <div style="flex: 1; min-width: 200px; margin: 5px;">
+    <img src="./images/new/vscode.png" alt="Image 1" style="width: 100%;">
   </div>
-</div>
+
 
 #### Workflow
 
