@@ -1,3 +1,4 @@
+
 format = """
 [](surface0)\
 $os\
@@ -111,11 +112,9 @@ truncation_symbol = "…/"
 "Developer" = "󰲋 "
 
 [git_branch]
-symbol = ""
+# symbol = ""
 style = "bg:teal"
 format = '[[ $symbol $branch ](fg:base bg:green)]($style)'
-
-
 
 
 [git_status]
@@ -187,7 +186,7 @@ format = '[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)'
 disabled = false
 time_format = "%R"
 style = "bg:peach"
-format = '[[  $time ](fg:mantle bg:purple)]($style)'
+format = '[[ $time ](fg:mantle bg:purple)]($style)'
 
 [line_break]
 disabled = false
