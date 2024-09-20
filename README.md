@@ -1,7 +1,7 @@
 ### Setup
 #### Me
 ```shell
-git clone --recurse-submodules git@github.com:ashgw/dotfiles.git
+g cl --recurse-submodules git@github.com:ashgw/dotfiles.git
 ```
 #### Not me
 
