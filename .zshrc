@@ -88,8 +88,8 @@ alias \
 	pubip='dig +short myip.opendns.com @resolver1.opendns.com' \
   	localip='ipconfig getifaddr en1' \
 	ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'" \
-	ports='lsof +c0 -iTCP -sTCP:LISTEN -n -P'
-
+	ports='lsof +c0 -iTCP -sTCP:LISTEN -n -P' \
+  defaultip="ip route | grep default"
 plugins=(
 		zsh-syntax-highlighting
 		git
