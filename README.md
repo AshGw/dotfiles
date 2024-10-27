@@ -11,7 +11,7 @@ This will work on any POSIX machine, to:
 - Neovim, TMUX, FZF...
 - Nix
 - [Packages](./install/bootsrap) I use
-- [Languages](./install/arbitrary) I us
+- [Languages](./install/arbitrary) I use
 - Git [configuration](./.gitconfig), (Aliases, multiple accounts, etc...)
 
 Run:
