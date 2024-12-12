@@ -16,6 +16,7 @@
     defaultBranch = main
 
 [alias]
+    rf='reflog'
     b='git branch'
     a = add .
     p  = push origin
