@@ -1,0 +1,32 @@
+[/]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/']
+screensaver=['F8']
+terminal=@as []
+volume-down=['F2']
+volume-mute=['F1']
+volume-up=['F3']
+
+[custom-keybindings/custom0]
+binding='<Alt>t'
+command='gnome-terminal'
+name='Terminal'
+
+[custom-keybindings/custom1]
+binding='<Alt>e'
+command='code'
+name='VScode'
+
+[custom-keybindings/custom2]
+binding='<Alt>f'
+command='firefox'
+name='Firefox'
+
+[custom-keybindings/custom3]
+binding='<Alt>o'
+command='obsidian'
+name='Obsidian'
+
+[custom-keybindings/custom4]
+binding='<Alt>c'
+command='cursor'
+name='Cursor'
