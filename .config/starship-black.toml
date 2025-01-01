@@ -1,6 +1,7 @@
 format = """
-[░▒▓](#2e2e2e)\
-[  ](bg:#2e2e2e fg:#e0e0e0)\
+[](#2e2e2e)\
+$os\
+[](bg:#2e2e2e fg:#e0e0e0)\
 [](bg:#3a3a3a fg:#2e2e2e)\
 $directory\
 [](fg:#3a3a3a bg:#1e1e1e)\
@@ -47,7 +48,7 @@ renamed = '➜'
 deleted = '✖'
 
 [git_branch]
-symbol = ""
+# symbol = ""
 style = "bg:#1e1e1e"
 format = '[[ $symbol $branch ](fg:#3a3a3a bg:#1e1e1e)]($style)'
 
@@ -84,4 +85,31 @@ format = '[[ $symbol ($version) ](fg:#3a3a3a bg:#0f0f0f)]($style)'
 disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#080808"
-format = '[[  $time ](fg:#e0e0e0 bg:#080808)]($style)'
+format = '[[ $time ](fg:#e0e0e0 bg:#080808)]($style)'
+
+
+[os]
+disabled = false
+style = "fg:#e0e0e0 bg:#2e2e2e"
+
+[os.symbols]
+Windows = "󰍲"
+# Ubuntu = "󰕈"
+Ubuntu = "󰌽 "
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = ""
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
